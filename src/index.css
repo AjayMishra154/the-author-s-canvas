@@ -53,6 +53,52 @@
     --charcoal: 20 10% 8%;
     --charcoal-light: 20 10% 14%;
   }
+
+  .light {
+    --background: 40 30% 96%;
+    --foreground: 20 10% 12%;
+
+    --card: 40 20% 92%;
+    --card-foreground: 20 10% 12%;
+
+    --popover: 40 20% 92%;
+    --popover-foreground: 20 10% 12%;
+
+    --primary: 38 80% 45%;
+    --primary-foreground: 40 30% 96%;
+
+    --secondary: 35 15% 88%;
+    --secondary-foreground: 20 10% 12%;
+
+    --muted: 35 10% 90%;
+    --muted-foreground: 20 8% 45%;
+
+    --accent: 15 50% 45%;
+    --accent-foreground: 40 30% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 38 80% 45%;
+
+    --sidebar-background: 40 20% 94%;
+    --sidebar-foreground: 20 10% 12%;
+    --sidebar-primary: 38 80% 45%;
+    --sidebar-primary-foreground: 40 30% 96%;
+    --sidebar-accent: 35 15% 88%;
+    --sidebar-accent-foreground: 20 10% 12%;
+    --sidebar-border: 30 15% 85%;
+    --sidebar-ring: 38 80% 45%;
+
+    --gold: 38 80% 45%;
+    --gold-muted: 38 40% 55%;
+    --terracotta: 15 50% 45%;
+    --cream: 20 10% 12%;
+    --charcoal: 40 30% 96%;
+    --charcoal-light: 40 20% 92%;
+  }
 }
 
 @layer base {
