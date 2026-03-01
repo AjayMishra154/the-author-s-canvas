@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-
+import { Menu, X, Sun, Moon } from "lucide-react";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Books", href: "#books" },
@@ -13,6 +12,11 @@ const navItems = [
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLight, setIsLight] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("light", isLight);
+  }, [isLight]);
 
   const scrollTo = (href: string) => {
     setIsOpen(false);
@@ -39,15 +43,31 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={() => setIsLight(!isLight)}
+              className="ml-2 p-2 rounded-full text-muted-foreground hover:text-primary hover:bg-secondary transition-colors duration-300"
+              aria-label="Toggle theme"
+            >
+              {isLight ? <Moon size={16} /> : <Sun size={16} />}
+            </button>
           </div>
 
           {/* Mobile toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              onClick={() => setIsLight(!isLight)}
+              className="p-2 rounded-full text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isLight ? <Moon size={20} /> : <Sun size={20} />}
+            </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-foreground"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </nav>
 
