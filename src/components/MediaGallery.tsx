@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { X } from "lucide-react";
+import { X, Download, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import authorPortrait from "@/assets/author-portrait.png";
 import writingDesk from "@/assets/writing-desk.png";
 import filmStill from "@/assets/film-still.png";
@@ -22,6 +23,13 @@ const MediaGallery = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
+  const handleDownload = (src: string, alt: string) => {
+    const a = document.createElement("a");
+    a.href = src;
+    a.download = alt.replace(/\s+/g, "-").toLowerCase() + ".png";
+    a.click();
+  };
+
   return (
     <>
       <section id="gallery" className="section-padding bg-secondary/20" ref={ref}>
@@ -30,14 +38,22 @@ const MediaGallery = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="mb-16"
+            className="mb-16 flex items-end justify-between"
           >
-            <span className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4 block">
-              Media & Press
-            </span>
-            <h2 className="font-display text-4xl md:text-6xl font-light">
-              Gallery & <span className="italic text-gradient-gold">Media</span>
-            </h2>
+            <div>
+              <span className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4 block">
+                Media & Press
+              </span>
+              <h2 className="font-display text-4xl md:text-6xl font-light">
+                Gallery & <span className="italic text-gradient-gold">Media</span>
+              </h2>
+            </div>
+            <Link
+              to="/gallery"
+              className="hidden md:flex items-center gap-2 font-body text-xs tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors"
+            >
+              View All <ArrowRight size={14} />
+            </Link>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px] md:auto-rows-[280px]">
@@ -57,11 +73,31 @@ const MediaGallery = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-background/0 group-hover:bg-background/30 transition-colors duration-300" />
-                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="font-body text-xs tracking-wider">{img.alt}</span>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDownload(img.src, img.alt);
+                    }}
+                    className="p-1.5 bg-background/70 hover:bg-primary text-foreground hover:text-primary-foreground transition-colors"
+                    aria-label="Download"
+                  >
+                    <Download size={12} />
+                  </button>
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Mobile "View All" button */}
+          <div className="mt-8 text-center md:hidden">
+            <Link
+              to="/gallery"
+              className="inline-flex items-center gap-2 font-body text-xs tracking-wider uppercase px-6 py-3 border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
+            >
+              View Full Gallery <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>

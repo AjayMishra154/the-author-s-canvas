@@ -3,9 +3,15 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import BooksSection from "@/components/BooksSection";
 import FilmsSection from "@/components/FilmsSection";
-import ArticlesSection from "@/components/ArticlesSection";
+import WritingWorkSection from "@/components/WritingWorkSection";
+import NewsRoomSection from "@/components/NewsRoomSection";
 import PodcastsSection from "@/components/PodcastsSection";
+import AwardsSection from "@/components/AwardsSection";
+import TalksSection from "@/components/TalksSection";
+import CuratorialSection from "@/components/CuratorialSection";
+import SocialInitiativesSection from "@/components/SocialInitiativesSection";
 import MediaGallery from "@/components/MediaGallery";
+import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
@@ -16,9 +22,15 @@ const Index = () => {
       <AboutSection />
       <BooksSection />
       <FilmsSection />
-      <ArticlesSection />
+      <WritingWorkSection />
+      <NewsRoomSection />
       <PodcastsSection />
+      <AwardsSection />
+      <TalksSection />
+      <CuratorialSection />
+      <SocialInitiativesSection />
       <MediaGallery />
+      <ContactSection />
       <FooterSection />
     </div>
   );
