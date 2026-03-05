@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import authorPortrait from "@/assets/author-portrait.png";
+import SocialLinks from "./SocialLinks";
 
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-dark" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-background" />
       
       {/* Subtle grain overlay */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
@@ -73,6 +74,15 @@ const HeroSection = () => {
               >
                 About Me
               </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+              className="mt-10"
+            >
+              <SocialLinks size={16} />
             </motion.div>
           </div>
 

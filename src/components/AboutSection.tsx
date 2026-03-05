@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import writingDesk from "@/assets/writing-desk.png";
+import SocialLinks from "./SocialLinks";
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -25,7 +26,6 @@ const AboutSection = () => {
                 className="w-full aspect-[4/3] object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-primary/5" />
             </div>
           </motion.div>
 
@@ -62,6 +62,10 @@ const AboutSection = () => {
                 masterclasses in narrative structure, or wandering the salt marshes near his home with 
                 his two wolfhounds.
               </p>
+            </div>
+            <div className="mt-8">
+              <span className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3 block">Follow</span>
+              <SocialLinks size={18} />
             </div>
           </motion.div>
         </div>

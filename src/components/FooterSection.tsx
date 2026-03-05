@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import SocialLinks from "./SocialLinks";
 
 const FooterSection = () => {
   const ref = useRef(null);
@@ -12,25 +13,50 @@ const FooterSection = () => {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-12"
+          className="grid grid-cols-1 md:grid-cols-4 gap-12"
         >
           <div>
             <h3 className="font-display text-2xl font-light mb-4">Adrian Vale</h3>
-            <p className="font-body text-sm text-muted-foreground leading-relaxed">
+            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
               Author, filmmaker, and host of "Between the Lines."
             </p>
+            <SocialLinks size={16} />
+          </div>
+
+          <div>
+            <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-4">Explore</h4>
+            <div className="space-y-2">
+              {["Books", "Films", "Writing", "Podcasts", "Awards", "Talks"].map((link) => (
+                <button
+                  key={link}
+                  onClick={() => document.querySelector(`#${link.toLowerCase()}`)?.scrollIntoView({ behavior: "smooth" })}
+                  className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div>
             <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-4">Connect</h4>
             <div className="space-y-2">
-              {["Twitter/X", "Instagram", "Substack", "Letterboxd"].map((platform) => (
+              {[
+                { label: "YouTube", href: "https://youtube.com" },
+                { label: "Twitter/X", href: "https://twitter.com" },
+                { label: "LinkedIn", href: "https://linkedin.com" },
+                { label: "Instagram", href: "https://instagram.com" },
+                { label: "Facebook", href: "https://facebook.com" },
+                { label: "Wikipedia", href: "https://wikipedia.org" },
+              ].map((platform) => (
                 <a
-                  key={platform}
-                  href="#"
+                  key={platform.label}
+                  href={platform.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  {platform}
+                  {platform.label}
                 </a>
               ))}
             </div>
@@ -44,6 +70,9 @@ const FooterSection = () => {
             <a href="mailto:press@adrianvale.com" className="font-body text-sm text-primary hover:underline mt-2 inline-block">
               press@adrianvale.com
             </a>
+            <p className="font-body text-sm text-muted-foreground mt-4">
+              Literary representation by<br />Sterling Lord Literistic
+            </p>
           </div>
         </motion.div>
 

@@ -1,27 +1,44 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
+
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Books", href: "#books" },
   { label: "Films", href: "#films" },
-  { label: "Articles", href: "#articles" },
+  { label: "Writing", href: "#writing" },
   { label: "Podcasts", href: "#podcasts" },
+  { label: "Awards", href: "#awards" },
   { label: "Gallery", href: "#gallery" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLight, setIsLight] = useState(false);
+  const [isLight, setIsLight] = useState(() => {
+    return localStorage.getItem("theme") === "light";
+  });
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     document.documentElement.classList.toggle("light", isLight);
+    localStorage.setItem("theme", isLight ? "light" : "dark");
   }, [isLight]);
 
   const scrollTo = (href: string) => {
     setIsOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.querySelector(href);
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const el = document.querySelector(href);
+      el?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -33,12 +50,12 @@ const Navigation = () => {
           </button>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollTo(item.href)}
-                className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="font-body text-[11px] tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 {item.label}
               </button>
@@ -53,7 +70,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile toggle */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => setIsLight(!isLight)}
               className="p-2 rounded-full text-muted-foreground hover:text-primary transition-colors"
@@ -78,16 +95,16 @@ const Navigation = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-lg flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-lg flex flex-col items-center justify-center gap-6"
           >
             {navItems.map((item, i) => (
               <motion.button
                 key={item.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.05 }}
                 onClick={() => scrollTo(item.href)}
-                className="font-display text-3xl font-light text-foreground hover:text-primary transition-colors"
+                className="font-display text-2xl font-light text-foreground hover:text-primary transition-colors"
               >
                 {item.label}
               </motion.button>
