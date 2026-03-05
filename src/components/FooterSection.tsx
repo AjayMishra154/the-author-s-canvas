@@ -16,7 +16,7 @@ const FooterSection = () => {
           className="grid grid-cols-1 md:grid-cols-4 gap-12"
         >
           <div>
-            <h3 className="font-display text-2xl font-light mb-4">Adrian Vale</h3>
+            <h3 className="font-display text-2xl font-light mb-4">Pankaj Dubey</h3>
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
               Author, filmmaker, and host of "Between the Lines."
             </p>
@@ -67,8 +67,8 @@ const FooterSection = () => {
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               For press inquiries, speaking engagements, and rights information:
             </p>
-            <a href="mailto:press@adrianvale.com" className="font-body text-sm text-primary hover:underline mt-2 inline-block">
-              press@adrianvale.com
+            <a href="mailto:press@Pankajdubey.com" className="font-body text-sm text-primary hover:underline mt-2 inline-block">
+              press@Pankajdubey.com
             </a>
             <p className="font-body text-sm text-muted-foreground mt-4">
               Literary representation by<br />Sterling Lord Literistic
@@ -78,7 +78,7 @@ const FooterSection = () => {
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="font-body text-xs text-muted-foreground">
-            © 2026 Adrian Vale. All rights reserved.
+            © 2026 Pankaj Dubey. All rights reserved.
           </span>
           <span className="font-body text-xs text-muted-foreground">
             Literary representation by Sterling Lord Literistic

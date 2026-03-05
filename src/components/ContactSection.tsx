@@ -10,6 +10,8 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-padding" ref={ref}>
       <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -19,111 +21,102 @@ const ContactSection = () => {
           <span className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4 block">
             Get in Touch
           </span>
+
           <h2 className="font-display text-4xl md:text-6xl font-light">
             Contact <span className="italic text-gradient-gold">Us</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+          {/* LEFT — Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-10"
           >
-            <div className="space-y-8">
+            {/* Email */}
+            <div className="flex items-start gap-4">
+              <Mail className="text-primary" size={20} />
               <div>
-                <h3 className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">General Inquiries</h3>
-                <a href="mailto:hello@adrianvale.com" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
-                  <Mail size={16} /> hello@adrianvale.com
+                <h3 className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-2">
+                  Email
+                </h3>
+                <a
+                  href="mailto:hello@Pankajdubey.com"
+                  className="font-body text-muted-foreground hover:text-primary transition-colors"
+                >
+                  hello@Pankajdubey.com
                 </a>
               </div>
+            </div>
 
+            {/* Press */}
+            <div className="flex items-start gap-4">
+              <Mail className="text-primary" size={20} />
               <div>
-                <h3 className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Press & Media</h3>
-                <a href="mailto:press@adrianvale.com" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
-                  <Mail size={16} /> press@adrianvale.com
+                <h3 className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-2">
+                  Press & Media
+                </h3>
+                <a
+                  href="mailto:press@Pankajdubey.com"
+                  className="font-body text-muted-foreground hover:text-primary transition-colors"
+                >
+                  press@Pankajdubey.com
                 </a>
               </div>
+            </div>
 
+            {/* Location */}
+            <div className="flex items-start gap-4">
+              <MapPin className="text-primary" size={20} />
               <div>
-                <h3 className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Speaking Engagements</h3>
-                <a href="mailto:speaking@adrianvale.com" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
-                  <Mail size={16} /> speaking@adrianvale.com
-                </a>
-              </div>
-
-              <div>
-                <h3 className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Literary Representation</h3>
-                <p className="font-body text-sm text-muted-foreground">Sterling Lord Literistic</p>
-                <p className="font-body text-sm text-muted-foreground flex items-center gap-2 mt-1">
-                  <MapPin size={14} /> New York, NY
+                <h3 className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-2">
+                  Location
+                </h3>
+                <p className="font-body text-muted-foreground">
+                  New York, NY
                 </p>
               </div>
+            </div>
 
-              <div>
-                <h3 className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Follow</h3>
-                <SocialLinks size={20} />
-              </div>
+            {/* Social */}
+            <div>
+              <h3 className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
+                Follow
+              </h3>
+              <SocialLinks size={22} />
             </div>
           </motion.div>
 
+          {/* RIGHT — CTA */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8 }}
+            className="bg-muted/20 border border-border p-12"
           >
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Thank you for your message. We'll get back to you soon.");
-              }}
-              className="space-y-6"
+            <h3 className="font-display text-3xl font-light mb-6">
+              Let's Start a Conversation
+            </h3>
+
+            <p className="text-muted-foreground mb-8 font-body">
+              Whether it's about speaking engagements, press inquiries,
+              collaborations, or literary rights — feel free to reach out.
+              We'd love to hear from you.
+            </p>
+
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ajaymishra8885@gmail.com&su=Website Inquiry"
+              target="_blank"
+              className="inline-flex items-center gap-2 font-body text-xs tracking-wider uppercase px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+
             >
-              <div>
-                <label className="font-body text-xs tracking-wider uppercase text-muted-foreground mb-2 block">Name</label>
-                <input
-                  type="text"
-                  required
-                  className="w-full bg-transparent border border-border px-4 py-3 font-body text-sm text-foreground focus:border-primary focus:outline-none transition-colors"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label className="font-body text-xs tracking-wider uppercase text-muted-foreground mb-2 block">Email</label>
-                <input
-                  type="email"
-                  required
-                  className="w-full bg-transparent border border-border px-4 py-3 font-body text-sm text-foreground focus:border-primary focus:outline-none transition-colors"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <div>
-                <label className="font-body text-xs tracking-wider uppercase text-muted-foreground mb-2 block">Subject</label>
-                <select className="w-full bg-transparent border border-border px-4 py-3 font-body text-sm text-foreground focus:border-primary focus:outline-none transition-colors">
-                  <option value="general">General Inquiry</option>
-                  <option value="press">Press & Media</option>
-                  <option value="speaking">Speaking Engagement</option>
-                  <option value="rights">Rights & Licensing</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label className="font-body text-xs tracking-wider uppercase text-muted-foreground mb-2 block">Message</label>
-                <textarea
-                  required
-                  rows={5}
-                  className="w-full bg-transparent border border-border px-4 py-3 font-body text-sm text-foreground focus:border-primary focus:outline-none transition-colors resize-none"
-                  placeholder="Your message..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 font-body text-xs tracking-wider uppercase px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-              >
-                Send Message <Send size={14} />
-              </button>
-            </form>
+              Email Us <Send size={14} />
+            </a>
           </motion.div>
+
         </div>
       </div>
     </section>

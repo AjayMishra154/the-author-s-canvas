@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import BookDetail from "./pages/BookDetail";
 import GalleryPage from "./pages/GalleryPage";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/books/:slug" element={<BookDetail />} />

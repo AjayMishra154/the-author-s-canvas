@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import writingDesk from "@/assets/writing-desk.png";
+// import writingDesk from "@/assets/writing-desk.png";
 import SocialLinks from "./SocialLinks";
 
 const AboutSection = () => {
@@ -21,7 +21,7 @@ const AboutSection = () => {
           >
             <div className="relative">
               <img
-                src={writingDesk}
+                src="/author/pic3.jpg"
                 alt="Writing desk with typewriter"
                 className="w-full aspect-[4/3] object-cover"
                 loading="lazy"
@@ -45,20 +45,20 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-5 text-muted-foreground font-body text-sm leading-relaxed">
               <p>
-                Adrian Vale is an internationally acclaimed author and filmmaker whose work spans the 
+                Pankaj Dubey is an internationally acclaimed author and filmmaker whose work spans the 
                 liminal spaces between literary fiction and cinematic storytelling. With ten published novels, 
                 three feature films, and a body of essays that has appeared in The New Yorker, The Atlantic, 
-                and The Paris Review, Vale has established himself as one of the most distinctive voices 
+                and The Paris Review, Dubey has established himself as one of the most distinctive voices 
                 of contemporary literature.
               </p>
               <p>
-                Born in coastal Maine, Vale draws deeply from landscapes of isolation and the quiet dramas 
+                Born in coastal Maine, Dubey draws deeply from landscapes of isolation and the quiet dramas 
                 of ordinary lives. His debut novel, "The Weight of Tides," won the National Book Award and 
                 was adapted into a critically acclaimed film. He holds an MFA from the Iowa Writers' Workshop 
                 and has been a fellow at Yaddo, MacDowell, and the American Academy in Rome.
               </p>
               <p>
-                When not writing, Vale can be found recording his podcast "Between the Lines," hosting 
+                When not writing, Dubey can be found recording his podcast "Between the Lines," hosting 
                 masterclasses in narrative structure, or wandering the salt marshes near his home with 
                 his two wolfhounds.
               </p>

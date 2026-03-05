@@ -46,7 +46,7 @@ const Navigation = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="flex items-center justify-between px-6 md:px-12 lg:px-20 py-4">
           <button onClick={() => scrollTo("#hero")} className="font-display text-2xl font-light tracking-wider text-foreground hover:text-primary transition-colors">
-            ADRIAN VALE
+            Pankaj dubey
           </button>
 
           {/* Desktop nav */}

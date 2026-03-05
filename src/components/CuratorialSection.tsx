@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Film, BookOpen, ExternalLink } from "lucide-react";
-import festivalEvent from "@/assets/festival-event.png";
+import festidubeyvent from "@/assets/festival-event.png";
 
 const projects = [
   {
@@ -63,8 +63,8 @@ const CuratorialSection = () => {
             className="lg:col-span-1"
           >
             <div className="relative aspect-[3/4] overflow-hidden">
-              <img src={festivalEvent} alt="Festival event" className="w-full h-full object-cover" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
+              <img src={festidubeyvent} alt="Festival event" className="w-full h-full object-cover" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent dark:block hidden" />
               <div className="absolute bottom-6 left-6">
                 <span className="font-body text-xs text-primary tracking-wider uppercase">Festivals & Exhibitions</span>
               </div>

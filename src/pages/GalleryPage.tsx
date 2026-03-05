@@ -10,7 +10,7 @@ import podcastStudio from "@/assets/podcast-studio.png";
 import galleryLandscape from "@/assets/gallery-landscape.png";
 import awardsDisplay from "@/assets/awards-display.png";
 import authorTalk from "@/assets/author-talk.png";
-import festivalEvent from "@/assets/festival-event.png";
+import festidubeyvent from "@/assets/festival-event.png";
 import socialInitiative from "@/assets/social-initiative.png";
 
 const allImages = [
@@ -22,7 +22,7 @@ const allImages = [
   { src: galleryLandscape, alt: "Landscape inspiration", category: "Inspiration" },
   { src: awardsDisplay, alt: "Awards display", category: "Awards" },
   { src: authorTalk, alt: "Speaking at literary festival", category: "Events" },
-  { src: festivalEvent, alt: "Film festival event", category: "Events" },
+  { src: festidubeyvent, alt: "Film festival event", category: "Events" },
   { src: socialInitiative, alt: "Community initiative", category: "Social" },
 ];
 

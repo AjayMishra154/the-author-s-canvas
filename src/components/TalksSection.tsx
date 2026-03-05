@@ -42,14 +42,14 @@ const TalksSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative aspect-[16/10] mb-6">
-              <img src={authorTalk} alt="Adrian Vale speaking" className="w-full h-full object-cover" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+              <img src={authorTalk} alt="Pankaj Dubey speaking" className="w-full h-full object-cover" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent dark:block hidden" />
             </div>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
-              Adrian Vale is a sought-after speaker at literary festivals, film events, and academic institutions worldwide. 
+              Pankaj Dubey is a sought-after speaker at literary festivals, film events, and academic institutions worldwide. 
               His talks explore the intersection of storytelling, cinema, and the creative process.
             </p>
-            <a href="mailto:speaking@adrianvale.com" className="inline-flex items-center gap-2 font-body text-xs tracking-wider uppercase px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mt-6">
+            <a href="mailto:speaking@Pankajdubey.com" className="inline-flex items-center gap-2 font-body text-xs tracking-wider uppercase px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mt-6">
               Book a Speaking Engagement <ExternalLink size={12} />
             </a>
           </motion.div>

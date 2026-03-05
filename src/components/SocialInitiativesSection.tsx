@@ -50,12 +50,12 @@ const SocialInitiativesSection = () => {
               Social <span className="italic text-gradient-gold">Initiatives</span>
             </h2>
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8 max-w-md">
-              Literature has the power to change lives. Through these initiatives, Adrian works to 
+              Literature has the power to change lives. Through these initiatives, Pankaj works to 
               ensure that the transformative power of storytelling reaches everyone.
             </p>
             <div className="relative aspect-[16/10]">
               <img src={socialInitiative} alt="Community initiative" className="w-full h-full object-cover" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent dark:block hidden" />
             </div>
           </motion.div>
 

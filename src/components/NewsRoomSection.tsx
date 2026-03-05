@@ -3,13 +3,13 @@ import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const pressArticles = [
-  { title: "Adrian Vale Wins National Book Award for 'The Weight of Tides'", source: "The New York Times", date: "November 2024", url: "https://nytimes.com" },
+  { title: "Pankaj Dubey Wins National Book Award for 'The Weight of Tides'", source: "The New York Times", date: "November 2024", url: "https://nytimes.com" },
   { title: "The Filmmaker-Author Redefining Literary Adaptation", source: "The Guardian", date: "October 2024", url: "https://theguardian.com" },
-  { title: "Venice Spotlight: Vale's Cinematic Vision", source: "Variety", date: "September 2023", url: "https://variety.com" },
+  { title: "Venice Spotlight: Dubey's Cinematic Vision", source: "Variety", date: "September 2023", url: "https://variety.com" },
   { title: "MacArthur 'Genius' Grant Recipients Announced", source: "NPR", date: "October 2022", url: "https://npr.org" },
-  { title: "Why Adrian Vale Is the Voice of a Generation", source: "Time Magazine", date: "June 2022", url: "https://time.com" },
+  { title: "Why Pankaj Dubey Is the Voice of a Generation", source: "Time Magazine", date: "June 2022", url: "https://time.com" },
   { title: "Sundance Standout: 'Saltwater Elegy' Review", source: "IndieWire", date: "January 2021", url: "https://indiewire.com" },
-  { title: "The Quiet Revolution of Adrian Vale's Prose", source: "The Atlantic", date: "March 2020", url: "https://theatlantic.com" },
+  { title: "The Quiet Revolution of Pankaj Dubey's Prose", source: "The Atlantic", date: "March 2020", url: "https://theatlantic.com" },
   { title: "PEN/Faulkner Award Goes to 'What the River Knows'", source: "Publishers Weekly", date: "April 2018", url: "https://publishersweekly.com" },
 ];
 

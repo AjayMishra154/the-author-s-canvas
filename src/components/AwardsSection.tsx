@@ -3,18 +3,35 @@ import { useRef } from "react";
 import { Trophy } from "lucide-react";
 import awardsDisplay from "@/assets/awards-display.png";
 
+import { Award, BookOpen, Mic, Globe } from "lucide-react";
+
 const awards = [
-  { title: "National Book Award", category: "Fiction", year: "2024", work: "The Weight of Tides" },
-  { title: "Booker Prize Longlist", category: "Fiction", year: "2024", work: "The Weight of Tides" },
-  { title: "PEN/Faulkner Award", category: "Fiction", year: "2018", work: "What the River Knows" },
-  { title: "National Book Award Finalist", category: "Poetry", year: "2021", work: "Nocturne in Salt" },
-  { title: "Venice Film Festival", category: "Official Selection", year: "2023", work: "The Weight of Tides (Film)" },
-  { title: "Sundance Film Festival", category: "Official Selection", year: "2021", work: "Saltwater Elegy" },
-  { title: "TIFF Best Short Film", category: "Winner", year: "2017", work: "First Light" },
-  { title: "Guggenheim Fellowship", category: "Literature", year: "2020", work: "" },
-  { title: "MacArthur Fellowship", category: "Genius Grant", year: "2022", work: "" },
-  { title: "PEN/Hemingway Award Finalist", category: "Debut Fiction", year: "2015", work: "First Light" },
+  {
+    icon: Award,
+    title: "Navodit Lekhak Award",
+    year: "2002",
+    description: "Awarded by the Delhi Hindi Academy for emerging literary excellence.",
+  },
+  {
+    icon: Globe,
+    title: "Youth Icon Award for Social Entrepreneurship",
+    year: "2010",
+    description: "Recognized for impactful initiatives combining literature and social entrepreneurship.",
+  },
+  {
+    icon: BookOpen,
+    title: "Writers’ Residency — Seoul Art Space Yeonhui-dong",
+    year: "2016",
+    description: "Selected for an international writers’ residency in South Korea to develop literary descriptions.",
+  },
+  {
+    icon: Mic,
+    title: "Global Innoventure Award for Literature & Storytelling",
+    year: "2018",
+    description: "Honored at the House of Lords, London, for global contributions to storytelling and literature.",
+  },
 ];
+
 
 const AwardsSection = () => {
   const ref = useRef(null);
@@ -38,7 +55,7 @@ const AwardsSection = () => {
             </h2>
             <div className="relative aspect-[16/10] mb-6">
               <img src={awardsDisplay} alt="Awards and accreditations" className="w-full h-full object-cover" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent dark:block hidden" />
             </div>
           </motion.div>
 
@@ -63,12 +80,12 @@ const AwardsSection = () => {
                       <h3 className="font-display text-lg font-light group-hover:text-primary transition-colors">
                         {award.title}
                       </h3>
-                      <span className="font-body text-[10px] tracking-wider uppercase text-muted-foreground">
+                      {/* <span className="font-body text-[10px] tracking-wider uppercase text-muted-foreground">
                         {award.category}
-                      </span>
+                      </span> */}
                     </div>
-                    {award.work && (
-                      <span className="font-body text-xs text-muted-foreground italic">{award.work}</span>
+                    {award.description && (
+                      <span className="font-body text-xs text-muted-foreground italic">{award.description}</span>
                     )}
                   </div>
                   <span className="font-body text-xs text-primary">{award.year}</span>

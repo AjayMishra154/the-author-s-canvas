@@ -34,9 +34,9 @@ const HeroSection = () => {
               transition={{ duration: 1, delay: 0.2 }}
               className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[0.9] mb-8"
             >
-              Adrian
+              Pankaj
               <br />
-              <span className="text-gradient-gold italic font-light">Vale</span>
+              <span className="text-gradient-gold italic font-light">Dubey</span>
             </motion.h1>
 
             <motion.div
@@ -96,12 +96,12 @@ const HeroSection = () => {
             <div className="relative aspect-square max-w-lg mx-auto">
               <div className="absolute -inset-4 border border-primary/20" />
               <img
-                src={authorPortrait}
-                alt="Adrian Vale - Author portrait"
+                src="/author/pic2.jpg"
+                alt="Pankaj Dubey - Author portrait"
                 className="w-full h-full object-cover"
                 loading="eager"
               />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background to-transparent dark:block hidden" />
             </div>
           </motion.div>
         </div>
