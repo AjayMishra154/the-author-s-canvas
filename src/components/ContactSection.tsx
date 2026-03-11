@@ -44,10 +44,10 @@ const ContactSection = () => {
                   Email
                 </h3>
                 <a
-                  href="mailto:hello@Pankajdubey.com"
+                  href="mailto: carryonpd@gmail.com"
                   className="font-body text-muted-foreground hover:text-primary transition-colors"
                 >
-                  hello@Pankajdubey.com
+                   carryonpd@gmail.com
                 </a>
               </div>
             </div>
@@ -60,10 +60,10 @@ const ContactSection = () => {
                   Press & Media
                 </h3>
                 <a
-                  href="mailto:press@Pankajdubey.com"
+                  href="mailto: carryonpd@gmail.com"
                   className="font-body text-muted-foreground hover:text-primary transition-colors"
                 >
-                  press@Pankajdubey.com
+                  carryonpd@gmail.com
                 </a>
               </div>
             </div>

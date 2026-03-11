@@ -42,12 +42,12 @@ const FooterSection = () => {
             <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-4">Connect</h4>
             <div className="space-y-2">
               {[
-                { label: "YouTube", href: "https://youtube.com" },
-                { label: "Twitter/X", href: "https://twitter.com" },
-                { label: "LinkedIn", href: "https://linkedin.com" },
-                { label: "Instagram", href: "https://instagram.com" },
-                { label: "Facebook", href: "https://facebook.com" },
-                { label: "Wikipedia", href: "https://wikipedia.org" },
+                { label: "YouTube", href: "https://www.youtube.com/@SmallTownsBigStories"},
+                { label: "Twitter/X", href: "https://x.com/carryonpd"},
+                { label: "LinkedIn", href: "https://www.linkedin.com/in/pankaj-dubey-03a9baa/"},
+                { label: "Instagram", href: "https://www.instagram.com/carryonpd/"},
+                { label: "Facebook", href: "https://www.facebook.com/carryonpd" },
+                { label: "Wikipedia", href: "https://en.wikipedia.org/wiki/Pankaj_Dubey"},
               ].map((platform) => (
                 <a
                   key={platform.label}
@@ -67,8 +67,8 @@ const FooterSection = () => {
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               For press inquiries, speaking engagements, and rights information:
             </p>
-            <a href="mailto:press@Pankajdubey.com" className="font-body text-sm text-primary hover:underline mt-2 inline-block">
-              press@Pankajdubey.com
+            <a href="mailto: carryonpd@gmail.com" className="font-body text-sm text-primary hover:underline mt-2 inline-block">
+            carryonpd@gmail.com
             </a>
             <p className="font-body text-sm text-muted-foreground mt-4">
               Literary representation by<br />Sterling Lord Literistic

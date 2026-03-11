@@ -23,8 +23,8 @@ export const books: Book[] =[
     longDescription:
       "Ishq Baaki is a poignant exploration of love that refuses to fade. Set across contemporary India and beyond, the story follows characters navigating heartbreak, destiny, and reunion. Through emotional twists and layered relationships, the novel reflects on how true love survives even when circumstances tear people apart. With deeply human characters and heartfelt storytelling, the novel celebrates hope, resilience, and the belief that some connections are never truly broken.",
     coverImage: "ishqbaaki.jpg",
-    penguin: "https://www.penguin.co.in",
-    amazon: "https://www.amazon.in",
+    penguin: "https://www.penguin.co.in/book/one-sting-attached-hindi-ishq-baki-%E0%A4%87%E0%A4%B6%E0%A5%8D%E0%A4%95%E0%A4%BC-%E0%A4%AC%E0%A4%BE%E0%A4%95%E0%A4%BC%E0%A5%80/",
+    amazon: "https://www.amazon.in/Sting-Attached-Hindi-%E0%A4%87%E0%A4%B6%E0%A5%8D%E0%A4%95%E0%A4%BC-%E0%A4%AC%E0%A4%BE%E0%A4%95%E0%A4%BC%E0%A5%80/dp/0143465821?s=bazaar",
   },
   {
     slug: "one-string-attached",
@@ -49,8 +49,8 @@ export const books: Book[] =[
     longDescription:
       "Trending in Love examines how technology and social media influence relationships in the modern world. The story follows characters whose love lives unfold under the glare of the digital age—where emotions, mistakes, and confessions can go viral in seconds. Blending humor, drama, and heartfelt moments, the novel portrays the complexities of romance in an era where trends and hashtags often collide with genuine human feelings.",
     coverImage: "trendinginlovehindi.jpg",
-    penguin: "https://www.penguin.co.in",
-    amazon: "https://www.amazon.in",
+    penguin: "https://www.penguin.co.in/book/trending-in-love-hindi/",
+    amazon: "https://www.amazon.in/Trending-Love-Hindi-Pankaj-Dubey/dp/0143450190?s=bazaar",
   },
   {
     slug: "trending-in-love-english",
@@ -62,8 +62,8 @@ export const books: Book[] =[
     longDescription:
       "Trending in Love is a witty and engaging novel that explores how love stories unfold in a digitally connected world. As relationships develop through messages, posts, and viral moments, the characters must navigate misunderstandings, expectations, and public scrutiny. The novel blends humor with emotional depth, offering a relatable portrait of romance shaped by technology and modern lifestyles.",
     coverImage: "book3.jpg",
-    penguin: "https://www.penguin.co.in",
-    amazon: "https://www.amazon.in",
+    penguin: "https://www.penguin.co.in/book/trending-in-love-2/",
+    amazon: "https://www.amazon.in/Trending-Love-Pankaj-Dubey/dp/0143447947?s=bazaar",
   },
   {
     slug: "love-curry",
@@ -75,8 +75,8 @@ export const books: Book[] =[
     longDescription:
       "Love Curry is a lighthearted romantic story that celebrates love in its many forms—unexpected, messy, and deeply human. Set against the backdrop of urban India, the novel brings together quirky characters, witty conversations, and heartfelt emotions. Much like the dish it’s named after, the story blends humor, drama, and romance into an entertaining narrative about relationships, family expectations, and the search for happiness.",
     coverImage: "book4.jpg",
-    penguin: "https://www.penguin.co.in",
-    amazon: "https://www.amazon.in",
+    penguin: "https://www.penguin.co.in/book/love-curry-2/",
+    amazon: "https://www.amazon.in/Love-Curry-Potpourri-Things-Between/dp/0143424505/ref=sr_1_1?s=books&ie=UTF8&qid=1515580514&sr=1-1&keywords=love+curry",
   },
   {
     slug: "love-curry-hindi",
@@ -88,8 +88,8 @@ export const books: Book[] =[
     longDescription:
       "Love Curry (Hindi) brings the charm and humor of the original English novel to Hindi readers. With relatable characters and witty storytelling, the novel explores the ups and downs of modern relationships. Through humor and emotional moments, the story reflects on how love, like good food, is best enjoyed with patience, understanding, and the right mix of ingredients.",
     coverImage: "book7.jpg",
-    penguin: "https://www.penguin.co.in",
-    amazon: "https://www.amazon.in",
+    penguin: "https://www.penguin.co.in/book/love-curry/",
+    amazon: "https://www.amazon.in/Love-Curry-Pankaj-Dubey/dp/0143424491?s=bazaar",
   },
   {
     slug: "ishqiyapa",
@@ -101,8 +101,8 @@ export const books: Book[] =[
     longDescription:
       "Ishqiyapa – To Hell with Love is a quirky romantic comedy that captures the chaos, heartbreak, and excitement that often come with love. Through entertaining characters and humorous situations, the novel explores how relationships can be both frustrating and deeply fulfilling. It is a story about accepting imperfections and discovering that love often appears when least expected.",
     coverImage: "book6.jpg",
-    penguin: "https://www.penguin.co.in",
-    amazon: "https://www.amazon.in",
+    penguin: "https://www.penguin.co.in/book/ishqiyapa/",
+    amazon: "https://www.amazon.in/Ishqiyapa-Hell-Love-Pankaj-Dubey/dp/0143424513?s=bazaar",
   },
   {
     slug: "ishqiyapa-hindi",
@@ -114,8 +114,8 @@ export const books: Book[] =[
     longDescription:
       "Ishqiyapa (Hindi) delivers the same humor and charm of the English version while connecting deeply with Hindi readers. The novel explores love’s unpredictable nature through witty dialogue, emotional moments, and relatable characters. It reminds readers that relationships are often messy but always meaningful.",
     coverImage: "ishqyapahindi.jpeg",
-    penguin: "https://www.penguin.co.in",
-    amazon: "https://www.amazon.in",
+    penguin: "https://www.penguin.co.in/book/ishqiyapa/",
+    amazon: "https://www.amazon.in/-/hi/%E0%A4%AA%E0%A4%82%E0%A4%95%E0%A4%9C-%E0%A4%A6%E0%A5%81%E0%A4%AC%E0%A5%87-ebook/dp/B06XXM8717",
   },
   {
     slug: "what-a-loser",
@@ -127,8 +127,8 @@ export const books: Book[] =[
     longDescription:
       "What a Loser! follows the journey of a young protagonist navigating the challenges of adulthood, career struggles, and complicated relationships. Filled with humor and relatable situations, the novel captures the confusion and excitement of growing up. It ultimately becomes a story about self-discovery, resilience, and realizing that failures often lead to the most meaningful successes.",
     coverImage: "book1.jpg",
-    penguin: "https://www.penguin.co.in",
-    amazon: "https://www.amazon.in",
+    penguin: "https://www.penguin.co.in/book/what-a-loser/",
+    amazon: "https://www.amazon.in/What-Loser-Pankaj-Dubey-ebook/dp/B06XYFQ868",
   },
   {
     slug: "loser-kahin-ka",
@@ -140,7 +140,7 @@ export const books: Book[] =[
     longDescription:
       "Loser Kahin Ka! is the Hindi adaptation of What a Loser!, bringing the same humorous and relatable story to Hindi readers. Through witty storytelling and heartfelt moments, the novel portrays the journey of a young person trying to overcome failures, understand relationships, and ultimately discover purpose and confidence.",
     coverImage: "book2.jpg",
-    penguin: "https://www.penguin.co.in",
-    amazon: "https://www.amazon.in",
+    penguin: "https://www.penguin.co.in/book/what-a-loser/",
+    amazon: "https://www.amazon.in/Loser-Kahin-What-Looser-Hindi/dp/0143419234",
   },
 ];
