@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, X, Download } from "lucide-react";
-import authorPortrait from "@/assets/author-portrait.png";
 import writingDesk from "@/assets/writing-desk.png";
 import filmStill from "@/assets/film-still.png";
 import booksArrangement from "@/assets/books-arrangement.png";
@@ -14,12 +13,12 @@ import festidubeyvent from "@/assets/festival-event.png";
 import socialInitiative from "@/assets/social-initiative.png";
 
 const allImages = [
-  { src: authorPortrait, alt: "Author portrait", category: "Portrait" },
+  { src: "/images/556863366_25014752961482487_2145445215205061588_n.jpg", alt: "Author portrait", category: "Portrait" },
   { src: writingDesk, alt: "Writing desk", category: "Behind the Scenes" },
   { src: filmStill, alt: "Film still", category: "Films" },
   { src: booksArrangement, alt: "Books arrangement", category: "Books" },
   { src: podcastStudio, alt: "Podcast studio", category: "Behind the Scenes" },
-  { src: galleryLandscape, alt: "Landscape inspiration", category: "Inspiration" },
+  { src: "/images/1653917526670.jpeg", alt: "Landscape inspiration", category: "Inspiration" },
   { src: awardsDisplay, alt: "Awards display", category: "Awards" },
   { src: authorTalk, alt: "Speaking at literary festival", category: "Events" },
   { src: festidubeyvent, alt: "Film festival event", category: "Events" },

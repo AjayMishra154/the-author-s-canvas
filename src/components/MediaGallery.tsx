@@ -10,12 +10,14 @@ import podcastStudio from "@/assets/podcast-studio.png";
 import galleryLandscape from "@/assets/gallery-landscape.png";
 
 const galleryImages = [
-  { src: authorPortrait, alt: "Author portrait", span: "col-span-1 row-span-2" },
+  { src: "/images/556863366_25014752961482487_2145445215205061588_n.jpg", alt: "Author portrait", span: "col-span-1 row-span-2" },
   { src: writingDesk, alt: "Writing desk", span: "col-span-1 row-span-1" },
   { src: filmStill, alt: "Film still", span: "col-span-1 row-span-1" },
-  { src: galleryLandscape, alt: "Landscape inspiration", span: "col-span-2 row-span-1" },
+  { src: "/images/1653917526670.jpeg", alt: "books", span: "col-span-2 row-span-1" },
   { src: podcastStudio, alt: "Podcast studio", span: "col-span-1 row-span-1" },
   { src: booksArrangement, alt: "Books arrangement", span: "col-span-1 row-span-1" },
+
+
 ];
 
 const MediaGallery = () => {

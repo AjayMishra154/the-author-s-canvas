@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Mic, ExternalLink } from "lucide-react";
-import authorTalk from "@/assets/author-talk.png";
+
 
 const talks = [
   { title: "The Future of the Novel", event: "Edinburgh International Book Festival", year: "2025", type: "Keynote" },
@@ -42,7 +42,7 @@ const TalksSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative aspect-[16/10] mb-6">
-              <img src={authorTalk} alt="Pankaj Dubey speaking" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/images/speaker.jpg" alt="Pankaj Dubey speaking" className="w-full h-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent dark:block hidden" />
             </div>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
