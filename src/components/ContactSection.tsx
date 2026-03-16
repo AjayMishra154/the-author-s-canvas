@@ -76,7 +76,7 @@ const ContactSection = () => {
                   Location
                 </h3>
                 <p className="font-body text-muted-foreground">
-                  New York, NY
+                  Mumbai, IND
                 </p>
               </div>
             </div>

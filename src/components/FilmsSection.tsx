@@ -1,7 +1,6 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Play } from "lucide-react";
-import filmStill from "@/assets/film-still.png";
 
 const films = [
   {
@@ -40,6 +39,8 @@ const films = [
 
 const FilmsSection = () => {
   const ref = useRef(null);
+  const [showVideo, setShowVideo] = useState(false);
+
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
@@ -61,17 +62,17 @@ const FilmsSection = () => {
           </span>
 
           <h2 className="font-display text-4xl md:text-6xl font-light">
-            Stories on{" "}
-            <span className="italic text-gradient-gold">Screen</span>
+            Stories on <span className="italic text-gradient-gold">Screen</span>
           </h2>
         </motion.div>
 
-        {/* Film List */}
+        {/* Latest Release */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
           className="relative mb-16 group cursor-pointer"
+          onClick={() => setShowVideo(true)}
         >
           <div className="relative aspect-[21/9] overflow-hidden rounded-lg">
             <img
@@ -100,14 +101,11 @@ const FilmsSection = () => {
               <h3 className="font-display text-3xl md:text-4xl font-light mt-2 text-white">
                 Maratha Mandir Cinema
               </h3>
-
-              {/* <p className="font-body text-sm text-gray-200 mt-1">
-                Feature Film · 118 min · 2023
-              </p> */}
             </div>
           </div>
         </motion.div>
 
+        {/* Films List */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14">
           {films.map((film, index) => (
             <motion.div
@@ -119,22 +117,16 @@ const FilmsSection = () => {
               className="group flex flex-col sm:flex-row gap-6"
             >
               {/* Poster */}
-              <div className="relative w-40 sm:w-44 flex-shrink-0 aspect-[2/3] overflow-hidden rounded-lg">
+              <div className="relative w-40 sm:w-44 mx-auto sm:mx-0 flex-shrink-0 aspect-[2/3] overflow-hidden rounded-lg">
                 <img
                   src={film.poster}
                   alt={`${film.title} poster`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-
-                {/* <div className="absolute top-3 left-3">
-                  <span className="font-body text-[10px] tracking-widest uppercase bg-accent text-accent-foreground px-2 py-1 rounded">
-                    {film.type}
-                  </span>
-                </div> */}
               </div>
 
               {/* Info */}
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center text-center sm:text-left">
                 <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">
                   {film.year}
                 </p>
@@ -151,6 +143,29 @@ const FilmsSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Video Modal */}
+      {showVideo && (
+        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6">
+          <div className="relative w-full max-w-5xl aspect-video">
+            <button
+              onClick={() => setShowVideo(false)}
+              className="absolute -top-10 right-0 text-white text-sm"
+            >
+              Close ✕
+            </button>
+
+            <iframe
+              className="w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/8Y3z55Uyr30?autoplay=1"
+              title="Maratha Mandir Cinema"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

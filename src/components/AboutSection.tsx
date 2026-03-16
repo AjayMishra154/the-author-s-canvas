@@ -44,25 +44,26 @@ const AboutSection = () => {
               <span className="italic text-gradient-gold">silence and shadow</span>
             </h2>
             <div className="space-y-5 text-muted-foreground font-body text-sm leading-relaxed">
-              <p>
-                Pankaj Dubey is an internationally acclaimed author and filmmaker whose work spans the 
-                liminal spaces between literary fiction and cinematic storytelling. With ten published novels, 
-                three feature films, and a body of essays that has appeared in The New Yorker, The Atlantic, 
-                and The Paris Review, Dubey has established himself as one of the most distinctive voices 
-                of contemporary literature.
-              </p>
-              <p>
-                Born in coastal Maine, Dubey draws deeply from landscapes of isolation and the quiet dramas 
-                of ordinary lives. His debut novel, "The Weight of Tides," won the National Book Award and 
-                was adapted into a critically acclaimed film. He holds an MFA from the Iowa Writers' Workshop 
-                and has been a fellow at Yaddo, MacDowell, and the American Academy in Rome.
-              </p>
-              <p>
-                When not writing, Dubey can be found recording his podcast "Between the Lines," hosting 
-                masterclasses in narrative structure, or wandering the salt marshes near his home with 
-                his two wolfhounds.
-              </p>
-            </div>
+  <p>
+    Pankaj Dubey is an established literary leader and bestselling bilingual author whose work spans
+    fiction, public literary discourse, and contemporary narrative culture. Over a career of more than
+    two decades, he has built a sustained body of work in literature, combining commercially successful
+    novels with cultural leadership through festivals, public conversations, columns, and mentorship.
+  </p>
+
+  <p>
+    His primary artistic practice lies in literature, where he has created a significant body of
+    storytelling that engages with contemporary society, identity, and the evolving human condition.
+    Alongside his novels, Dubey has contributed extensively to literary journalism and cultural
+    commentary, helping shape conversations around modern Indian literature.
+  </p>
+
+  <p>
+    Beyond writing, he actively participates in the global literary ecosystem through festival
+    curation, public dialogue, and cross-media storytelling. His work across journalism, audio,
+    and screen-based storytelling extends the reach of his narrative practice to international audiences.
+  </p>
+</div>
             <div className="mt-8">
               <span className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3 block">Follow</span>
               <SocialLinks size={18} />

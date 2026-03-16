@@ -55,7 +55,7 @@ const Navigation = () => {
               <button
                 key={item.label}
                 onClick={() => scrollTo(item.href)}
-                className="font-body text-[11px] tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="font-body text-[14px] tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 {item.label}
               </button>

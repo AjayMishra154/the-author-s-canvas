@@ -10,28 +10,52 @@ const awards = [
     icon: Award,
     title: "Navodit Lekhak Award",
     year: "2002",
-    description: "Awarded by the Delhi Hindi Academy for emerging literary excellence.",
+    description:
+      "Awarded by the Delhi Hindi Academy for emerging literary excellence.",
   },
   {
     icon: Globe,
     title: "Youth Icon Award for Social Entrepreneurship",
     year: "2010",
-    description: "Recognized for impactful initiatives combining literature and social entrepreneurship.",
+    description:
+      "Recognized for impactful initiatives combining literature and social entrepreneurship.",
+  },
+  {
+    icon: BookOpen,
+    title: "Lit-O-Fest Best First Published Book of an Author Award",
+    year: "2014",
+    description:
+      "Recognized at Lit-O-Fest for the best debut published literary work.",
+  },
+  {
+    icon: BookOpen,
+    title: "Lit-O-Fest Excellence in Literature Award",
+    year: "2015",
+    description:
+      "Awarded at Lit-O-Fest for outstanding contribution to literature.",
   },
   {
     icon: BookOpen,
     title: "Writers’ Residency — Seoul Art Space Yeonhui-dong",
     year: "2016",
-    description: "Selected for an international writers’ residency in South Korea to develop literary descriptions.",
+    description:
+      "Selected for an international writers’ residency in South Korea to develop literary work.",
+  },
+  {
+    icon: Mic,
+    title: "Best Debut Director",
+    year: "2018",
+    description:
+      "Awarded at the Vancouver Film Festival for outstanding debut direction.",
   },
   {
     icon: Mic,
     title: "Global Innoventure Award for Literature & Storytelling",
     year: "2018",
-    description: "Honored at the House of Lords, London, for global contributions to storytelling and literature.",
+    description:
+      "Honored at the House of Lords, UK Parliament, for global contributions to storytelling and literature.",
   },
 ];
-
 
 const AwardsSection = () => {
   const ref = useRef(null);
