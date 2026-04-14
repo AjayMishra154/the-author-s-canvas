@@ -52,8 +52,8 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="font-body text-muted-foreground text-base md:text-lg leading-relaxed max-w-md"
             >
-              Exploring the boundaries between memory and truth through novels, 
-              films, and the stories that haunt us long after the last page is turned.
+              Telling stories from the heart of small-town India—where tradition meets aspiration,
+              and everyday lives unfold into narratives of love, humour, and cultural transformation.
             </motion.p>
 
             <motion.div

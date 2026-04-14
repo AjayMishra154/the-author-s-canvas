@@ -3,16 +3,41 @@ import { useRef } from "react";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 
 const writings = [
-  { title: "On the Architecture of Silence", publication: "The New Yorker", date: "January 2026", type: "Essay", url: "https://newyorker.com" },
-  { title: "Memory as Landscape", publication: "The Paris Review", date: "November 2025", type: "Essay", url: "https://theparisreview.org" },
-  { title: "The Filmmaker's Notebook", publication: "Sight & Sound", date: "September 2025", type: "Journal", url: "https://bfi.org.uk" },
-  { title: "Letters from the Salt Marsh", publication: "The Atlantic", date: "June 2025", type: "Dispatches", url: "https://theatlantic.com" },
-  { title: "Why We Still Need Difficult Books", publication: "Literary Hub", date: "March 2025", type: "Essay", url: "https://lithub.com" },
-  { title: "The Podcast as Literary Form", publication: "Granta", date: "December 2024", type: "Essay", url: "https://granta.com" },
-  { title: "Notes on Adaptation: A Writer's Journal", publication: "The Believer", date: "August 2024", type: "Journal", url: "https://thebeliever.net" },
-  { title: "Cartographies of Grief", publication: "Poetry Magazine", date: "April 2024", type: "Poetry", url: "https://poetryfoundation.org" },
-  { title: "The Invisible Architecture of Story", publication: "Tin House", date: "January 2024", type: "Craft Essay", url: "https://tinhouse.com" },
-  { title: "Walking the Meridian", publication: "Orion Magazine", date: "October 2023", type: "Nature Writing", url: "https://orionmagazine.org" },
+  {
+    title: "A Letter to Sooraj Barjatya",
+    publication: "DailyO",
+    date: "2020",
+    type: "Essay",
+    url: "#",
+  },
+  {
+    title: "The Creative Economy: How Authorpreneurs Are Shaping Cultures and Businesses",
+    publication: "The Economic Times",
+    date: "2021",
+    type: "Essay",
+    url: "#",
+  },
+  {
+    title: "South Korea: The Bizarre, the Beautiful, and the Power of Storytelling",
+    publication: "The Quint",
+    date: "2020",
+    type: "Essay",
+    url: "#",
+  },
+  {
+    title: "Cine Sohbat — Cinema & Culture Column",
+    publication: "Column Series",
+    date: "Ongoing",
+    type: "Column",
+    url: "#",
+  },
+  {
+    title: "Diaspora, Identity & Storytelling",
+    publication: "Pravasi Today",
+    date: "Editorial Work",
+    type: "Editorial",
+    url: "#",
+  },
 ];
 
 const WritingWorkSection = () => {
@@ -22,6 +47,7 @@ const WritingWorkSection = () => {
   return (
     <section id="writing" className="section-padding bg-secondary/30" ref={ref}>
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -31,11 +57,26 @@ const WritingWorkSection = () => {
           <span className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4 block">
             Journals & Essays
           </span>
+
           <h2 className="font-display text-4xl md:text-6xl font-light">
             Writing <span className="italic text-gradient-gold">Work</span>
           </h2>
         </motion.div>
 
+        {/* Intro */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="font-body text-sm text-muted-foreground leading-relaxed max-w-2xl mb-12"
+        >
+          Beyond fiction, Pankaj Dubey engages with contemporary culture, cinema,
+          identity, and society through essays and columns across platforms. His
+          non-fiction voice blends storytelling with sharp socio-cultural
+          observation—rooted in small-town India yet resonating globally.
+        </motion.p>
+
+        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {writings.map((item, i) => (
             <motion.a
@@ -57,18 +98,27 @@ const WritingWorkSection = () => {
                 </div>
                 <ArrowUpRight size={14} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
+
               <h3 className="font-display text-xl font-light mb-2 group-hover:text-primary transition-colors">
                 {item.title}
               </h3>
+
               <div className="flex items-center gap-3">
                 <span className="font-body text-[10px] tracking-wider uppercase text-muted-foreground border border-border px-2 py-0.5">
                   {item.type}
                 </span>
-                <span className="font-body text-xs text-muted-foreground">{item.date}</span>
+                <span className="font-body text-xs text-muted-foreground">
+                  {item.date}
+                </span>
               </div>
             </motion.a>
           ))}
         </div>
+
+        {/* Bottom note */}
+        <p className="text-xs text-muted-foreground mt-10">
+          + Additional essays across cinema, culture, diaspora, and storytelling platforms
+        </p>
       </div>
     </section>
   );

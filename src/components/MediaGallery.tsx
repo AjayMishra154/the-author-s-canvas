@@ -12,7 +12,7 @@ import galleryLandscape from "@/assets/gallery-landscape.png";
 const galleryImages = [
   { src: "/images/556863366_25014752961482487_2145445215205061588_n.jpg", alt: "Author portrait", span: "col-span-1 row-span-2" },
   { src: writingDesk, alt: "Writing desk", span: "col-span-1 row-span-1" },
-  { src: "public/images/53010745_2371232359594536_3846260758232956928_n.jpg", alt: "Podcast studio", span: "col-span-1 row-span-1" },
+  { src: "/images/53010745_2371232359594536_3846260758232956928_n.jpg", alt: "Podcast studio", span: "col-span-1 row-span-1" },
   { src: "/images/1653917526670.jpeg", alt: "books", span: "col-span-2 row-span-1" },
   { src: podcastStudio, alt: "Podcast studio", span: "col-span-1 row-span-1" },
   { src: "/images/34582118_1938454489538994_6291587632157687808_n.jpg" ,alt: "Books arrangement", span: "col-span-1 row-span-1" },

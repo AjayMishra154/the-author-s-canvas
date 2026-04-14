@@ -3,14 +3,21 @@ import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const pressArticles = [
-  { title: "Pankaj Dubey Wins National Book Award for 'The Weight of Tides'", source: "The New York Times", date: "November 2024", url: "https://nytimes.com" },
-  { title: "The Filmmaker-Author Redefining Literary Adaptation", source: "The Guardian", date: "October 2024", url: "https://theguardian.com" },
-  { title: "Venice Spotlight: Dubey's Cinematic Vision", source: "Variety", date: "September 2023", url: "https://variety.com" },
-  { title: "MacArthur 'Genius' Grant Recipients Announced", source: "NPR", date: "October 2022", url: "https://npr.org" },
-  { title: "Why Pankaj Dubey Is the Voice of a Generation", source: "Time Magazine", date: "June 2022", url: "https://time.com" },
-  { title: "Sundance Standout: 'Saltwater Elegy' Review", source: "IndieWire", date: "January 2021", url: "https://indiewire.com" },
-  { title: "The Quiet Revolution of Pankaj Dubey's Prose", source: "The Atlantic", date: "March 2020", url: "https://theatlantic.com" },
-  { title: "PEN/Faulkner Award Goes to 'What the River Knows'", source: "Publishers Weekly", date: "April 2018", url: "https://publishersweekly.com" },
+  { title: "All the big stories come from small towns': Pankaj Dubey on writing India's forgotten narratives'", source: "Eastern Eye", date: "April 2026", url: "https://www.easterneye.biz/pankaj-dubey-small-town-stories-india-narratives/" },
+  { title: "Short film Maratha Mandir Cinema pays tribute to DDLJ", source: "Indulge Express", date: "October 2021", url: "https://www.indulgexpress.com/entertainment/cinema/2021/Oct/21/short-film-maratha-mandir-cinema-pays-tribute-to-ddlj-36419.html" },
+  { title: "How Pankaj Dubey Turned Love Letters into Powerful Stories", source: "Eastern Eye", date: "March 2026", url: "https://www.easterneye.biz/how-pankaj-dubey-turned-love-letters-into-powerful-stories/" },
+  { title: "Sarika, Swanand Kirkire's Tribute to SRK-Kajol's 'Dilwale Dulhania Le Jayenge'", source: "Variety", date: "October 2021", url: "https://www.thequint.com/entertainment/bollywood/dilwale-dulhania-le-jayenge-tribute-maratha-mandir-cinema-short-film-sarika-swanand-kirkire-pankaj-dubey-shradha-singh#read-more" },
+  {
+    title: "Chaibasa writer in Seoul workshop",
+    source: "The Times of India",
+    year: "April 2016", 
+    url: "http://timesofindia.indiatimes.com/articleshow/52051005.cms"
+  },
+  { title: "One String Attached: Love in the shadow of history", source: "Qatar Tribune", date: "Augest 2025", url: "https://www.qatar-tribune.com/article/192039/nation/one-string-attached-love-in-the-shadow-of-history" },
+  // { title: "Why Pankaj Dubey Is the Voice of a Generation", source: "Time Magazine", date: "June 2022", url: "https://time.com" },
+  // { title: "Sundance Standout: 'Saltwater Elegy' Review", source: "IndieWire", date: "January 2021", url: "https://indiewire.com" },
+  // { title: "The Quiet Revolution of Pankaj Dubey's Prose", source: "The Atlantic", date: "March 2020", url: "https://theatlantic.com" },
+  // { title: "PEN/Faulkner Award Goes to 'What the River Knows'", source: "Publishers Weekly", date: "April 2018", url: "https://publishersweekly.com" },
 ];
 
 const NewsRoomSection = () => {

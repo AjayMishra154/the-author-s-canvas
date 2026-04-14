@@ -39,33 +39,44 @@ const AboutSection = () => {
             <span className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
               About the Author
             </span>
+
             <h2 className="font-display text-4xl md:text-5xl font-light mb-8 leading-tight">
               Stories born from <br />
-              <span className="italic text-gradient-gold">silence and shadow</span>
+              <span className="italic text-gradient-gold">
+                silence and shadow
+              </span>
             </h2>
+
             <div className="space-y-5 text-muted-foreground font-body text-sm leading-relaxed">
-  <p>
-    Pankaj Dubey is an established literary leader and bestselling bilingual author whose work spans
-    fiction, public literary discourse, and contemporary narrative culture. Over a career of more than
-    two decades, he has built a sustained body of work in literature, combining commercially successful
-    novels with cultural leadership through festivals, public conversations, columns, and mentorship.
-  </p>
+              <p>
+                In an era where Indian storytelling is often dominated by metropolitan narratives, Pankaj Dubey stands out as a voice rooted in the overlooked landscapes of small-town India.
+              </p>
 
-  <p>
-    His primary artistic practice lies in literature, where he has created a significant body of
-    storytelling that engages with contemporary society, identity, and the evolving human condition.
-    Alongside his novels, Dubey has contributed extensively to literary journalism and cultural
-    commentary, helping shape conversations around modern Indian literature.
-  </p>
+              <p>
+                Born in Ranchi and shaped by life in Chaibasa, Dubey’s work captures the emotional and cultural tensions of India’s “in-between” spaces—towns that exist somewhere between tradition and aspiration. Much like how R. K. Narayan imagined Malgudi, Dubey’s fiction reclaims the small town as a powerful narrative universe for contemporary times.
+              </p>
 
-  <p>
-    Beyond writing, he actively participates in the global literary ecosystem through festival
-    curation, public dialogue, and cross-media storytelling. His work across journalism, audio,
-    and screen-based storytelling extends the reach of his narrative practice to international audiences.
-  </p>
-</div>
+              <p>
+                A former journalist with BBC World Service, Dubey transitioned into literature and cinema, crafting bestselling novels such as What a Loser!, Ishqiyapa, and One String Attached. His storytelling blends humour, romance, and socio-political insight—often embedding larger national conversations within intimate personal journeys.
+              </p>
+
+              <p>
+                But Dubey’s work extends beyond the page. As the founder of the Sadak Chhaap Film Festival, he has created a unique cultural platform that brings cinema to street-connected children—redefining access to storytelling at the grassroots level. His short film Maratha Mandir Cinema has also travelled to international festivals, reinforcing his position as a cross-medium storyteller.
+              </p>
+
+              <p>
+                More recently, Dubey has emerged as a cultural curator, shaping conversations around literature, youth voices, and popular culture. His role in curating the Nalanda Literature Festival reflects a larger vision: to democratize storytelling and bridge the gap between emerging voices and global audiences.
+              </p>
+
+              <p>
+                At a time when global publishing is increasingly interested in diverse and authentic narratives, Dubey represents a compelling literary figure—one who not only writes about small-town India but actively builds ecosystems for its stories to be seen and heard.
+              </p>
+            </div>
+
             <div className="mt-8">
-              <span className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3 block">Follow</span>
+              <span className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3 block">
+                Follow
+              </span>
               <SocialLinks size={18} />
             </div>
           </motion.div>
