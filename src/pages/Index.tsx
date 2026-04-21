@@ -9,6 +9,7 @@ import PodcastsSection from "@/components/PodcastsSection";
 import AwardsSection from "@/components/AwardsSection";
 import TalksSection from "@/components/TalksSection";
 import CuratorialSection from "@/components/CuratorialSection";
+import MediaSection from "@/components/MediaSection";
 import SocialInitiativesSection from "@/components/SocialInitiativesSection";
 import MediaGallery from "@/components/MediaGallery";
 import ContactSection from "@/components/ContactSection";
@@ -28,6 +29,7 @@ const Index = () => {
       <AwardsSection />
       <TalksSection />
       <CuratorialSection />
+      <MediaSection />
       <SocialInitiativesSection />
       <MediaGallery />
       <ContactSection />

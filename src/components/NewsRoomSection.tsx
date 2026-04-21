@@ -14,6 +14,13 @@ const pressArticles = [
     url: "http://timesofindia.indiatimes.com/articleshow/52051005.cms"
   },
   { title: "One String Attached: Love in the shadow of history", source: "Qatar Tribune", date: "Augest 2025", url: "https://www.qatar-tribune.com/article/192039/nation/one-string-attached-love-in-the-shadow-of-history" },
+  {
+    title: "Penning stories while changing cityscapes",
+    subtitle: "Seoul residency honour for writer Pankaj Dubey with Chaibasa roots",
+    source: "Regular-article-logo", // fill this
+    year: "2020", // update if needed
+    url: "https://www.telegraphindia.com/jharkhand/penning-stories-while-changing-cityscapes/cid/1323784#"
+  }
   // { title: "Why Pankaj Dubey Is the Voice of a Generation", source: "Time Magazine", date: "June 2022", url: "https://time.com" },
   // { title: "Sundance Standout: 'Saltwater Elegy' Review", source: "IndieWire", date: "January 2021", url: "https://indiewire.com" },
   // { title: "The Quiet Revolution of Pankaj Dubey's Prose", source: "The Atlantic", date: "March 2020", url: "https://theatlantic.com" },
