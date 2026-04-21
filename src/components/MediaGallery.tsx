@@ -2,21 +2,23 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { X, Download, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import authorPortrait from "@/assets/author-portrait.png";
-import writingDesk from "@/assets/writing-desk.png";
-import filmStill from "@/assets/film-still.png";
-import booksArrangement from "@/assets/books-arrangement.png";
-import podcastStudio from "@/assets/podcast-studio.png";
-import galleryLandscape from "@/assets/gallery-landscape.png";
+import { galleryImages } from "@/data/galleryImages";
 
-const galleryImages = [
-  { src: "/images/556863366_25014752961482487_2145445215205061588_n.jpg", alt: "Author portrait", span: "col-span-1 row-span-2" },
-  { src: writingDesk, alt: "Writing desk", span: "col-span-1 row-span-1" },
-  { src: "/images/53010745_2371232359594536_3846260758232956928_n.jpg", alt: "Podcast studio", span: "col-span-1 row-span-1" },
-  { src: "/images/1653917526670.jpeg", alt: "books", span: "col-span-2 row-span-1" },
-  { src: podcastStudio, alt: "Podcast studio", span: "col-span-1 row-span-1" },
-  { src: "/images/34582118_1938454489538994_6291587632157687808_n.jpg" ,alt: "Books arrangement", span: "col-span-1 row-span-1" },
-];
+const galleryPreview = galleryImages.slice(0, 6).map((image, index) => {
+  const spans = [
+    "col-span-1 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-2 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+  ];
+
+  return {
+    ...image,
+    span: spans[index] ?? "col-span-1 row-span-1",
+  };
+});
 
 const MediaGallery = () => {
   const ref = useRef(null);
@@ -26,7 +28,7 @@ const MediaGallery = () => {
   const handleDownload = (src: string, alt: string) => {
     const a = document.createElement("a");
     a.href = src;
-    a.download = alt.replace(/\s+/g, "-").toLowerCase() + ".png";
+    a.download = decodeURIComponent(src.split("/").pop() ?? `${alt.replace(/\s+/g, "-").toLowerCase()}.jpeg`);
     a.click();
   };
 
@@ -60,7 +62,7 @@ const MediaGallery = () => {
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[140px] md:auto-rows-[280px]">
-            {galleryImages.map((img, i) => (
+            {galleryPreview.map((img, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}

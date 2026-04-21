@@ -44,7 +44,7 @@ const ContactSection = () => {
                   Email
                 </h3>
                 <a
-                  href="mailto: carryonpd@gmail.com"
+                  href="mailto:carryonpd@gmail.com"
                   className="font-body text-muted-foreground hover:text-primary transition-colors"
                 >
                    carryonpd@gmail.com
@@ -60,7 +60,7 @@ const ContactSection = () => {
                   Press & Media
                 </h3>
                 <a
-                  href="mailto: carryonpd@gmail.com"
+                  href="mailto:carryonpd@gmail.com"
                   className="font-body text-muted-foreground hover:text-primary transition-colors"
                 >
                   carryonpd@gmail.com
@@ -108,8 +108,7 @@ const ContactSection = () => {
             </p>
 
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=ajaymishra8885@gmail.com&su=Website Inquiry"
-              target="_blank"
+              href="mailto:carryonpd@gmail.com?subject=Website%20Inquiry"
               className="inline-flex items-center gap-2 font-body text-xs tracking-wider uppercase px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
 
             >

@@ -24,9 +24,9 @@ const FooterSection = () => {
           </div>
 
           <div>
-            <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-4">Explore</h4>
+            <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-4">Navigate</h4>
             <div className="space-y-2">
-              {["Books", "Films", "Writing", "Podcasts", "Awards", "Talks"].map((link) => (
+              {["Hero", "About", "Contact"].map((link) => (
                 <button
                   key={link}
                   onClick={() => document.querySelector(`#${link.toLowerCase()}`)?.scrollIntoView({ behavior: "smooth" })}
@@ -35,6 +35,24 @@ const FooterSection = () => {
                   {link}
                 </button>
               ))}
+              <a
+                href="/work/all"
+                className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                All Work
+              </a>
+              <a
+                href="/work/books-films"
+                className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Books & Films
+              </a>
+              <a
+                href="/gallery"
+                className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Gallery
+              </a>
             </div>
           </div>
 
@@ -67,7 +85,7 @@ const FooterSection = () => {
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               For press inquiries, speaking engagements, and rights information:
             </p>
-            <a href="mailto: carryonpd@gmail.com" className="font-body text-sm text-primary hover:underline mt-2 inline-block">
+            <a href="mailto:carryonpd@gmail.com" className="font-body text-sm text-primary hover:underline mt-2 inline-block">
             carryonpd@gmail.com
             </a>
             <p className="font-body text-sm text-muted-foreground mt-4">

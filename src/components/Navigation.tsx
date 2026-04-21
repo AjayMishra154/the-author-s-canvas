@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
 
 const navItems = [
   { label: "About", href: "#about" },
-  { label: "Books", href: "#books" },
-  { label: "Films", href: "#films" },
-  { label: "Writing", href: "#writing" },
-  { label: "Podcasts", href: "#podcasts" },
-  { label: "Awards", href: "#awards" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Books & Films", to: "/work/books-films" },
+  { label: "Writing & Media", to: "/work/writing-media" },
+  { label: "Talks & Awards", to: "/work/talks-awards" },
+  { label: "All Work", to: "/work/all" },
+  { label: "Gallery", to: "/gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -51,15 +50,25 @@ const Navigation = () => {
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-6">
-            {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => scrollTo(item.href)}
-                className="font-body text-[14px] tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
-              >
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) =>
+              item.to ? (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  className="font-body text-[14px] tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => scrollTo(item.href!)}
+                  className="font-body text-[14px] tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  {item.label}
+                </button>
+              ),
+            )}
             <button
               onClick={() => setIsLight(!isLight)}
               className="ml-2 p-2 rounded-full text-muted-foreground hover:text-primary hover:bg-secondary transition-colors duration-300"
@@ -97,18 +106,35 @@ const Navigation = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-40 bg-background/95 backdrop-blur-lg flex flex-col items-center justify-center gap-6"
           >
-            {navItems.map((item, i) => (
-              <motion.button
-                key={item.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-                onClick={() => scrollTo(item.href)}
-                className="font-display text-2xl font-light text-foreground hover:text-primary transition-colors"
-              >
-                {item.label}
-              </motion.button>
-            ))}
+            {navItems.map((item, i) =>
+              item.to ? (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                >
+                  <Link
+                    to={item.to}
+                    onClick={() => setIsOpen(false)}
+                    className="font-display text-2xl font-light text-foreground hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
+              ) : (
+                <motion.button
+                  key={item.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  onClick={() => scrollTo(item.href!)}
+                  className="font-display text-2xl font-light text-foreground hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </motion.button>
+              ),
+            )}
           </motion.div>
         )}
       </AnimatePresence>

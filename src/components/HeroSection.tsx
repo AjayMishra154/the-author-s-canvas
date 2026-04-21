@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import authorPortrait from "@/assets/author-portrait.png";
+import { useNavigate } from "react-router-dom";
 import SocialLinks from "./SocialLinks";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
@@ -63,10 +65,10 @@ const HeroSection = () => {
               className="mt-10 flex gap-4"
             >
               <button
-                onClick={() => document.querySelector("#books")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => navigate("/work/all")}
                 className="font-body text-xs tracking-[0.2em] uppercase px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                Explore Books
+                View Work
               </button>
               <button
                 onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}

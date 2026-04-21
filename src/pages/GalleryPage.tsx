@@ -2,41 +2,20 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, X, Download } from "lucide-react";
-import writingDesk from "@/assets/writing-desk.png";
-import filmStill from "@/assets/film-still.png";
-import booksArrangement from "@/assets/books-arrangement.png";
-import podcastStudio from "@/assets/podcast-studio.png";
-import galleryLandscape from "@/assets/gallery-landscape.png";
-import awardsDisplay from "@/assets/awards-display.png";
-import authorTalk from "@/assets/author-talk.png";
-import festidubeyvent from "@/assets/festival-event.png";
-import socialInitiative from "@/assets/social-initiative.png";
+import { galleryImages } from "@/data/galleryImages";
 
-const allImages = [
-  { src: "/images/556863366_25014752961482487_2145445215205061588_n.jpg", alt: "Author portrait", category: "Portrait" },
-  { src: writingDesk, alt: "Writing desk", category: "Behind the Scenes" },
-  { src: filmStill, alt: "Film still", category: "Films" },
-  { src: booksArrangement, alt: "Books arrangement", category: "Books" },
-  { src: podcastStudio, alt: "Podcast studio", category: "Behind the Scenes" },
-  { src: "/images/1653917526670.jpeg", alt: "Landscape inspiration", category: "Inspiration" },
-  { src: awardsDisplay, alt: "Awards display", category: "Awards" },
-  { src: authorTalk, alt: "Speaking at literary festival", category: "Events" },
-  { src: festidubeyvent, alt: "Film festival event", category: "Events" },
-  { src: socialInitiative, alt: "Community initiative", category: "Social" },
-];
-
-const categories = ["All", ...Array.from(new Set(allImages.map((i) => i.category)))];
+const categories = ["All", ...Array.from(new Set(galleryImages.map((i) => i.category)))];
 
 const GalleryPage = () => {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [filter, setFilter] = useState("All");
 
-  const filtered = filter === "All" ? allImages : allImages.filter((i) => i.category === filter);
+  const filtered = filter === "All" ? galleryImages : galleryImages.filter((i) => i.category === filter);
 
   const handleDownload = (src: string, alt: string) => {
     const a = document.createElement("a");
     a.href = src;
-    a.download = alt.replace(/\s+/g, "-").toLowerCase() + ".png";
+    a.download = decodeURIComponent(src.split("/").pop() ?? `${alt.replace(/\s+/g, "-").toLowerCase()}.jpeg`);
     a.click();
   };
 

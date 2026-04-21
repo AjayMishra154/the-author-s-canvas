@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { Mic, ExternalLink } from "lucide-react";
 
 const talks = [
-  // 🔥 Highlighted / Featured
   {
     title: "Digital Storytelling Masterclass",
     event: "Dubai",
@@ -15,30 +14,15 @@ const talks = [
       link: "https://thebrewnews.com/brew-circle/pankaj-dubey-storytelling-workshop-dubai/",
     },
   },
-
-  // 🇮🇳 India – Literary Festivals
-  // { title: "Panel Discussion", event: "Jaipur Literature Festival", year: "2024", type: "Panel" },
-  // { title: "Session", event: "Lit Chowk, Indore", year: "2024", type: "Talk" },
+  { title: "Creative Writing Workshop", event: "Brookstone, Dubai", year: "2025", type: "Workshop" },
   { title: "Hindi in Contemporary Culture", event: "Sahityotsav, Raipur", year: "2024", type: "Talk" },
-  // { title: "Literary Session", event: "Shimla Literature Festival", year: "2023", type: "Panel" },
-  // { title: "Literary Session", event: "Jim Corbett Literature Festival", year: "2023", type: "Panel" },
+  { title: "Literary Session", event: "Lit-O-Fest, London", year: "2024", type: "Panel" },
+  { title: "Interactive Session", event: "Coventry University, UK", year: "2024", type: "Lecture" },
   { title: "Panel Discussion", event: "Lit-O-Fest, Mumbai", year: "2023", type: "Panel" },
   { title: "Literary Session", event: "Patna Literature Festival", year: "2023", type: "Panel" },
-  // { title: "Literary Session", event: "Kerala Literature Festival", year: "2023", type: "Panel" },
-
-  // 🎓 Academic & Institutional
-  // { title: "Author Talk", event: "IIM Bangalore", year: "2024", type: "Lecture" },
-  // { title: "Interactive Session", event: "Parul University, Gujarat", year: "2023", type: "Talk" },
   { title: "Interactive Session", event: "Reserve Bank of India, Mumbai", year: "2023", type: "Talk" },
-
-  // 🌍 International
-  { title: "Literary Session", event: "Lit-O-Fest, London", year: "2024", type: "Panel" },
-  { title: "Talk", event: "Seoul Art Space, South Korea", year: "2020", type: "Talk" },
-  { title: "Interactive Session", event: "Coventry University, UK", year: "2024", type: "Lecture" },
-
-  // 🎯 Workshops / Masterclasses
   { title: "Popular Fiction Masterclass", event: "Katha Kahan, Jaipur", year: "2023", type: "Masterclass" },
-  { title: "Creative Writing Workshop", event: "Brookstone, Dubai", year: "2025", type: "Workshop" },
+  { title: "Talk", event: "Seoul Art Space, South Korea", year: "2020", type: "Talk" },
 ];
 
 const TalksSection = () => {
@@ -97,7 +81,7 @@ const TalksSection = () => {
             </p>
 
             <a
-              href="mailto: carryonpd@gmail.com"
+              href="mailto:carryonpd@gmail.com"
               className="inline-flex items-center gap-2 font-body text-xs tracking-wider uppercase px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mt-6"
             >
               Book a Speaking Engagement <ExternalLink size={12} />
