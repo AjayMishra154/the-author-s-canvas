@@ -5,7 +5,13 @@ import SocialLinks from "./SocialLinks";
 const FooterSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const email = "carryonpd@gmail.com";
 
+  const subject = "Website Inquiry";
+
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&subject=${encodeURIComponent(
+    subject
+  )}`;
   return (
     <footer className="px-6 md:px-12 lg:px-20 py-20 border-t border-border" ref={ref}>
       <div className="max-w-7xl mx-auto">
@@ -42,10 +48,34 @@ const FooterSection = () => {
                 All Work
               </a>
               <a
-                href="/work/books-films"
+                href="/work/books"
                 className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                Books & Films
+                Books
+              </a>
+              <a
+                href="/work/films"
+                className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Films
+              </a>
+              <a
+                href="/work/curatorial"
+                className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Curatorial
+              </a>
+              <a
+                href="/work/podcasts"
+                className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Podcasts
+              </a>
+              <a
+                href="/work/festival"
+                className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Festival
               </a>
               <a
                 href="/gallery"
@@ -85,7 +115,7 @@ const FooterSection = () => {
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               For press inquiries, speaking engagements, and rights information:
             </p>
-            <a href="mailto:carryonpd@gmail.com" className="font-body text-sm text-primary hover:underline mt-2 inline-block">
+            <a  target="_blank" href={gmailLink} className="font-body text-sm text-primary hover:underline mt-2 inline-block">
             carryonpd@gmail.com
             </a>
             <p className="font-body text-sm text-muted-foreground mt-4">

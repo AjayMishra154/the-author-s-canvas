@@ -23,6 +23,11 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/work/all" element={<ExplorePage view="all" />} />
+          <Route path="/work/books" element={<ExplorePage view="books" />} />
+          <Route path="/work/films" element={<ExplorePage view="films" />} />
+          <Route path="/work/podcasts" element={<ExplorePage view="podcasts" />} />
+          <Route path="/work/curatorial" element={<ExplorePage view="curatorial" />} />
+          <Route path="/work/festival" element={<ExplorePage view="festival" />} />
           <Route path="/work/books-films" element={<ExplorePage view="books-films" />} />
           <Route path="/work/writing-media" element={<ExplorePage view="writing-media" />} />
           <Route path="/work/talks-awards" element={<ExplorePage view="talks-awards" />} />

@@ -4,18 +4,18 @@ import { ArrowUpRight, BookOpen } from "lucide-react";
 
 const writings = [
   {
-    title: "A Letter to Sooraj Barjatya",
-    publication: "DailyO",
-    date: "2020",
-    type: "Essay",
-    url: "https://www.dailyo.in/",
-  },
-  {
     title: "The Creative Economy: How Authorpreneurs Are Shaping Cultures and Businesses",
     publication: "The Economic Times",
     date: "2021",
     type: "Essay",
     url: "https://economictimes.indiatimes.com/",
+  },
+  {
+    title: "A Letter to Sooraj Barjatya",
+    publication: "DailyO",
+    date: "2020",
+    type: "Essay",
+    url: "https://www.dailyo.in/",
   },
   {
     title: "South Korea: The Bizarre, the Beautiful, and the Power of Storytelling",
@@ -39,7 +39,6 @@ const writings = [
     url: "https://www.pravasitoday.com/",
   },
 ];
-
 const WritingWorkSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -81,7 +80,7 @@ const WritingWorkSection = () => {
           {writings.map((item, i) => (
             <motion.a
               key={i}
-              href={item.url}
+              // href={item.url}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}

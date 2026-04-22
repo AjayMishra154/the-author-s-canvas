@@ -4,13 +4,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Books & Films", to: "/work/books-films" },
-  { label: "Writing & Media", to: "/work/writing-media" },
+  { label: "Home", href: "#hero" },
+  { label: "Books", to: "/work/books" },
+  { label: "Films", to: "/work/films" },
+  { label: "Festivals", to: "/work/curatorial" },
+  { label: "Podcasts", to: "/work/podcasts" },
   { label: "Talks & Awards", to: "/work/talks-awards" },
-  { label: "All Work", to: "/work/all" },
+  { label: "Writing & Media", to: "/work/writing-media" },
   { label: "Gallery", to: "/gallery" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const Navigation = () => {
@@ -18,6 +19,7 @@ const Navigation = () => {
   const [isLight, setIsLight] = useState(() => {
     return localStorage.getItem("theme") === "light";
   });
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -28,6 +30,7 @@ const Navigation = () => {
 
   const scrollTo = (href: string) => {
     setIsOpen(false);
+
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
@@ -40,11 +43,25 @@ const Navigation = () => {
     }
   };
 
+  const isActive = (item: any) => {
+    if (item.to) {
+      return location.pathname.startsWith(item.to);
+    }
+    // Home active when on root
+    if (item.href === "#hero") {
+      return location.pathname === "/";
+    }
+    return false;
+  };
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="flex items-center justify-between px-6 md:px-12 lg:px-20 py-4">
-          <button onClick={() => scrollTo("#hero")} className="font-display text-2xl font-light tracking-wider text-foreground hover:text-primary transition-colors">
+          <button
+            onClick={() => scrollTo("#hero")}
+            className="font-display text-2xl font-light tracking-wider text-foreground hover:text-primary transition-colors"
+          >
             Pankaj Dubey
           </button>
 
@@ -55,20 +72,51 @@ const Navigation = () => {
                 <Link
                   key={item.label}
                   to={item.to}
-                  className="font-body text-[14px] tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+                  className="relative font-body text-[14px] tracking-[0.15em] uppercase"
                 >
-                  {item.label}
+                  <span
+                    className={`transition-colors duration-300 ${
+                      isActive(item)
+                        ? "text-primary"
+                        : "text-muted-foreground hover:text-primary"
+                    }`}
+                  >
+                    {item.label}
+                  </span>
+
+                  {isActive(item) && (
+                    <motion.div
+                      layoutId="underline"
+                      className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary"
+                    />
+                  )}
                 </Link>
               ) : (
                 <button
                   key={item.label}
                   onClick={() => scrollTo(item.href!)}
-                  className="font-body text-[14px] tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+                  className="relative font-body text-[14px] tracking-[0.15em] uppercase"
                 >
-                  {item.label}
+                  <span
+                    className={`transition-colors duration-300 ${
+                      isActive(item)
+                        ? "text-primary"
+                        : "text-muted-foreground hover:text-primary"
+                    }`}
+                  >
+                    {item.label}
+                  </span>
+
+                  {isActive(item) && (
+                    <motion.div
+                      layoutId="underline"
+                      className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary"
+                    />
+                  )}
                 </button>
-              ),
+              )
             )}
+
             <button
               onClick={() => setIsLight(!isLight)}
               className="ml-2 p-2 rounded-full text-muted-foreground hover:text-primary hover:bg-secondary transition-colors duration-300"
@@ -87,6 +135,7 @@ const Navigation = () => {
             >
               {isLight ? <Moon size={20} /> : <Sun size={20} />}
             </button>
+
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground"
@@ -117,7 +166,11 @@ const Navigation = () => {
                   <Link
                     to={item.to}
                     onClick={() => setIsOpen(false)}
-                    className="font-display text-2xl font-light text-foreground hover:text-primary transition-colors"
+                    className={`font-display text-2xl font-light transition-colors ${
+                      isActive(item)
+                        ? "text-primary"
+                        : "text-foreground hover:text-primary"
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -129,11 +182,15 @@ const Navigation = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
                   onClick={() => scrollTo(item.href!)}
-                  className="font-display text-2xl font-light text-foreground hover:text-primary transition-colors"
+                  className={`font-display text-2xl font-light transition-colors ${
+                    isActive(item)
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {item.label}
                 </motion.button>
-              ),
+              )
             )}
           </motion.div>
         )}

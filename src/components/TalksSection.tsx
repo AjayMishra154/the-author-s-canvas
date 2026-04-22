@@ -28,7 +28,12 @@ const talks = [
 const TalksSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const subject = "Website Inquiry";
+  const email = "carryonpd@gmail.com";
 
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&subject=${encodeURIComponent(
+    subject
+  )}`;
   return (
     <section id="talks" className="section-padding bg-secondary/20" ref={ref}>
       <div className="max-w-7xl mx-auto">
@@ -81,7 +86,7 @@ const TalksSection = () => {
             </p>
 
             <a
-              href="mailto:carryonpd@gmail.com"
+              target="_blank" href={gmailLink} 
               className="inline-flex items-center gap-2 font-body text-xs tracking-wider uppercase px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mt-6"
             >
               Book a Speaking Engagement <ExternalLink size={12} />

@@ -7,6 +7,14 @@ const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const email = "carryonpd@gmail.com";
+  const subject = "Website Inquiry";
+
+  // ✅ Always opens Gmail in browser
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&subject=${encodeURIComponent(
+    subject
+  )}`;
+
   return (
     <section id="contact" className="section-padding" ref={ref}>
       <div className="max-w-7xl mx-auto">
@@ -29,7 +37,7 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
-          {/* LEFT — Contact Information */}
+          {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -44,10 +52,12 @@ const ContactSection = () => {
                   Email
                 </h3>
                 <a
-                  href="mailto:carryonpd@gmail.com"
+                  href={gmailLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-body text-muted-foreground hover:text-primary transition-colors"
                 >
-                   carryonpd@gmail.com
+                  {email}
                 </a>
               </div>
             </div>
@@ -60,10 +70,12 @@ const ContactSection = () => {
                   Press & Media
                 </h3>
                 <a
-                  href="mailto:carryonpd@gmail.com"
+                  href={gmailLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-body text-muted-foreground hover:text-primary transition-colors"
                 >
-                  carryonpd@gmail.com
+                  {email}
                 </a>
               </div>
             </div>
@@ -90,7 +102,7 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* RIGHT — CTA */}
+          {/* RIGHT */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -104,13 +116,13 @@ const ContactSection = () => {
             <p className="text-muted-foreground mb-8 font-body">
               Whether it's about speaking engagements, press inquiries,
               collaborations, or literary rights — feel free to reach out.
-              We'd love to hear from you.
             </p>
 
             <a
-              href="mailto:carryonpd@gmail.com?subject=Website%20Inquiry"
+              href={gmailLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-body text-xs tracking-wider uppercase px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-
             >
               Email Us <Send size={14} />
             </a>

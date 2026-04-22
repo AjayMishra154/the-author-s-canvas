@@ -16,8 +16,7 @@ const episodes = [
     guest: "Faisal Malik",
     description:
       "Actor and producer Faisal Malik shares his inspiring journey from small-town roots to becoming a familiar face in Indian cinema and web series.",
-    youtubeId: "https://www.youtube.com/watch?v=P3Hf7IFT8FE",
-    appleEmbed: "https://embed.podcasts.apple.com/in/podcast/small-towns-big-stories/id1828150683?i=1000663000001",
+    youtubeId: "https://www.youtube.com/watch?v=P3Hf7IFT8FE&list=PLcEJgING6kFI8NF6S3QUnfiM0noMZLSik&index=38",
   },
   {
     title: "Small Towns Big Stories",
@@ -26,8 +25,7 @@ const episodes = [
     guest: "Akshat Gupta",
     description:
       "Bestselling mythology author Akshat Gupta talks about spirituality, storytelling and the journey behind The Hidden Hindu.",
-    youtubeId: "https://www.youtube.com/watch?v=yXjH3ekxjcI",
-    appleEmbed: "https://embed.podcasts.apple.com/in/podcast/small-towns-big-stories/id1828150683?i=1000663000002",
+    youtubeId: "https://www.youtube.com/watch?v=yXjH3ekxjcI&list=PLcEJgING6kFI8NF6S3QUnfiM0noMZLSik&index=33&pp=iAQB",
   },
   {
     title: "Small Towns Big Stories",
@@ -36,18 +34,16 @@ const episodes = [
     guest: "Sumona Chakravarti",
     description:
       "Television actor Sumona Chakravarti opens up about her journey in entertainment and life behind the camera.",
-    youtubeId: "https://www.youtube.com/watch?v=3DiZevKWMic",
-    appleEmbed: "https://embed.podcasts.apple.com/in/podcast/small-towns-big-stories/id1828150683?i=1000663000003",
+    youtubeId: "https://www.youtube.com/watch?v=zWVa7nEciwU&list=PLcEJgING6kFI8NF6S3QUnfiM0noMZLSik&index=18&pp=iAQB",
   },
   {
     title: "Small Towns Big Stories",
     episode: "4",
-    duration: "47 min",
+    duration: "53 min",
     guest: "Amit Sial",
     description:
       "Actor Amit Sial shares his journey from theatre to powerful performances in films and web series.",
-    youtubeId: "https://www.youtube.com/watch?v=hVCZU0JAQHI",
-    appleEmbed: "https://embed.podcasts.apple.com/in/podcast/small-towns-big-stories/id1828150683?i=1000663000004",
+    youtubeId: "https://www.youtube.com/watch?v=V7X00-rGAnU&list=PLcEJgING6kFI8NF6S3QUnfiM0noMZLSik&index=24",
   },
   {
     title: "Small Towns Big Stories",
@@ -56,30 +52,25 @@ const episodes = [
     guest: "Sugandha Mishra",
     description:
       "Singer and comedian Sugandha Mishra reflects on her journey from classical music roots to national fame.",
-    youtubeId: "https://www.youtube.com/watch?v=cZ0o9psi-Ts",
-    appleEmbed: "https://embed.podcasts.apple.com/in/podcast/small-towns-big-stories/id1828150683?i=1000663000005",
+    youtubeId: "https://www.youtube.com/watch?v=cZ0o9psi-Ts&list=PLcEJgING6kFI8NF6S3QUnfiM0noMZLSik&index=34",
   },
   {
     title: "Small Towns Big Stories",
     episode: "6",
-    duration: "46 min",
-    guest: "Shivani Raghuvanshi",
+    duration: "38 min",
+    guest: "Puneet Sharma",
     description:
-      "Actor Shivani Raghuvanshi talks about her journey from theatre and independent films to gaining recognition through web series like Made in Heaven. In this episode, she reflects on growing up in a small town, discovering acting, and navigating the challenges of the entertainment industry. A heartfelt conversation about ambition, persistence, and staying true to one’s artistic voice.",
-    youtubeId: "https://www.youtube.com/watch?v=VhF0N9FQXxM",
-    appleEmbed:
-      "https://embed.podcasts.apple.com/in/podcast/small-towns-big-stories/id1828150683?i=1000663000006",
+      "Puneet Sharma is the man behind some of Bollywood's biggest hits. From crafting memorable lyrics to shaping iconic screenplays, Puneet shares his fascinating journey in this episode. Tune in as he talks about his creative process, the challenges of the industry, and how a lyricist’s words can shape the soul of a film.",
+    youtubeId: "https://www.youtube.com/watch?v=LZd-N1CRP8Q",
   },
   {
     title: "Small Towns Big Stories",
     episode: "7",
-    duration: "49 min",
-    guest: "Sharib Hashmi",
+    duration: "55 min",
+    guest: "Rajesh Kumar",
     description:
-      "In this episode, actor Sharib Hashmi shares his inspiring story from working behind the scenes in the film industry to becoming a beloved actor known for his performances in The Family Man and other acclaimed projects. He discusses perseverance, the value of patience, and how small-town dreams can lead to big achievements in the world of cinema.",
-    youtubeId: "https://www.youtube.com/watch?v=3kR6kL7L7x8",
-    appleEmbed:
-      "https://embed.podcasts.apple.com/in/podcast/small-towns-big-stories/id1828150683?i=1000663000007",
+      "From Gaya to the glimmering TV screens, Rajesh Kumar opens up about his incredible journey in this episode of Small Towns, Big Stories. Known for his unforgettable role as Rosesh in 'Sarabhai vs Sarabhai,' Rajesh shares insights into his early life, the cultural richness of small towns, and the challenges of making it big in a competitive industry. This episode is filled with nostalgia, motivation, and the essence of small-town dreams coming true. Watch now to dive into the untold story of an actor who stayed true to his roots while reaching for the stars.",
+    youtubeId: "https://www.youtube.com/watch?v=zNKXeux_XaQ&list=PLcEJgING6kFI8NF6S3QUnfiM0noMZLSik&index=35",
   }
 ];
 
@@ -135,12 +126,12 @@ const PodcastsSection = () => {
                 <Youtube size={14} /> YouTube
               </a>
 
-              <a
+              {/* <a
                 href="https://podcasts.apple.com/in/podcast/small-towns-big-stories/id1828150683"
                 className="flex items-center gap-2 font-body text-xs tracking-wider uppercase px-5 py-3 border border-border"
               >
                 Apple Podcasts <ExternalLink size={12} />
-              </a>
+              </a> */}
             </div>
           </motion.div>
 
@@ -164,16 +155,15 @@ const PodcastsSection = () => {
                     #{ep.episode}
                   </span>
 
-                  {/* Play Audio */}
-                  <button
+                  {/* Play Audio
+                   <button
                     onClick={() => {
-                      setShowAudio(showAudio === ep.episode ? null : ep.episode);
-                      setShowVideo(null);
+                      setShowVideo(showVideo === ep.episode ? null : ep.episode);
+                      setShowAudio(null);
                     }}
-                    className="w-8 h-8 rounded-full border flex items-center justify-center"
                   >
-                    {showAudio === ep.episode ? <Pause size={12}/> : <Play size={12}/>}
-                  </button>
+                    <Youtube size={16}/>
+                  </button> */}
 
                   <div className="flex-1">
                     <h4 className="font-display text-lg">{ep.title}</h4>
@@ -189,7 +179,7 @@ const PodcastsSection = () => {
                       setShowAudio(null);
                     }}
                   >
-                    <Youtube size={16}/>
+                    <Youtube size={22}/>
                   </button>
 
                   <span className="text-xs text-muted-foreground hidden sm:block">
@@ -204,7 +194,7 @@ const PodcastsSection = () => {
                       allow="autoplay *; encrypted-media *;"
                       height="175"
                       style={{ width: "100%", border: "none" }}
-                      src={ep.appleEmbed}
+                      // src={ep.appleEmbed}
                     />
                   </div>
                 )}

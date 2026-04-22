@@ -3,10 +3,30 @@ import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const pressArticles = [
-  { title: "All the big stories come from small towns': Pankaj Dubey on writing India's forgotten narratives'", source: "Eastern Eye", date: "April 2026", url: "https://www.easterneye.biz/pankaj-dubey-small-town-stories-india-narratives/" },
-  { title: "How Pankaj Dubey Turned Love Letters into Powerful Stories", source: "Eastern Eye", date: "March 2026", url: "https://www.easterneye.biz/how-pankaj-dubey-turned-love-letters-into-powerful-stories/" },
-  { title: "One String Attached: Love in the shadow of history", source: "Qatar Tribune", date: "August 2025", url: "https://www.qatar-tribune.com/article/192039/nation/one-string-attached-love-in-the-shadow-of-history" },
-  { title: "Short film Maratha Mandir Cinema pays tribute to DDLJ", source: "Indulge Express", date: "October 2021", url: "https://www.indulgexpress.com/entertainment/cinema/2021/Oct/21/short-film-maratha-mandir-cinema-pays-tribute-to-ddlj-36419.html" },
+  {
+    title: "All the big stories come from small towns': Pankaj Dubey on writing India's forgotten narratives'",
+    source: "Eastern Eye",
+    date: "April 2026",
+    url: "https://www.easterneye.biz/pankaj-dubey-small-town-stories-india-narratives/"
+  },
+  {
+    title: "How Pankaj Dubey Turned Love Letters into Powerful Stories",
+    source: "Eastern Eye",
+    date: "March 2026",
+    url: "https://www.easterneye.biz/how-pankaj-dubey-turned-love-letters-into-powerful-stories/"
+  },
+  {
+    title: "One String Attached: Love in the shadow of history",
+    source: "Qatar Tribune",
+    date: "August 2025",
+    url: "https://www.qatar-tribune.com/article/192039/nation/one-string-attached-love-in-the-shadow-of-history"
+  },
+  {
+    title: "Short film Maratha Mandir Cinema pays tribute to DDLJ",
+    source: "Indulge Express",
+    date: "October 2021",
+    url: "https://www.indulgexpress.com/entertainment/cinema/2021/Oct/21/short-film-maratha-mandir-cinema-pays-tribute-to-ddlj-36419.html"
+  },
   {
     title: "Penning stories while changing cityscapes",
     subtitle: "Seoul residency honour for writer Pankaj Dubey with Chaibasa roots",
@@ -20,10 +40,6 @@ const pressArticles = [
     date: "April 2016",
     url: "https://timesofindia.indiatimes.com/articleshow/52051005.cms"
   }
-  // { title: "Why Pankaj Dubey Is the Voice of a Generation", source: "Time Magazine", date: "June 2022", url: "https://time.com" },
-  // { title: "Sundance Standout: 'Saltwater Elegy' Review", source: "IndieWire", date: "January 2021", url: "https://indiewire.com" },
-  // { title: "The Quiet Revolution of Pankaj Dubey's Prose", source: "The Atlantic", date: "March 2020", url: "https://theatlantic.com" },
-  // { title: "PEN/Faulkner Award Goes to 'What the River Knows'", source: "Publishers Weekly", date: "April 2018", url: "https://publishersweekly.com" },
 ];
 
 const NewsRoomSection = () => {

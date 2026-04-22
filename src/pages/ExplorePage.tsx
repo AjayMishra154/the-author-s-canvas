@@ -26,6 +26,11 @@ const sectionMap = {
 
 const viewSections = {
   all: ["books", "films", "writing", "newsroom", "podcasts", "awards", "talks", "curatorial", "media", "social"],
+  books: ["books"],
+  films: ["films"],
+  podcasts: ["podcasts"],
+  curatorial: ["curatorial"],
+  festival: ["talks", "awards"],
   "books-films": ["books", "films"],
   "writing-media": ["writing", "newsroom", "media"],
   "talks-awards": ["talks", "awards", "curatorial"],
@@ -33,7 +38,7 @@ const viewSections = {
 } as const;
 
 type ExplorePageProps = {
-  view: "all" | "books-films" | "writing-media" | "talks-awards" | "podcasts-social";
+  view: "all" | "books" | "films" | "podcasts" | "curatorial" | "festival" | "books-films" | "writing-media" | "talks-awards" | "podcasts-social";
 };
 
 const ExplorePage = ({ view }: ExplorePageProps) => {
