@@ -33,7 +33,7 @@ const viewSections = {
   festival: ["talks", "awards"],
   "books-films": ["books", "films"],
   "writing-media": ["writing", "newsroom", "media"],
-  "talks-awards": ["talks", "awards", "curatorial"],
+  "talks-awards": ["talks", "awards"],
   "podcasts-social": ["podcasts", "social"],
 } as const;
 
