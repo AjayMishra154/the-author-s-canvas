@@ -33,7 +33,7 @@ const FooterSection = () => {
             <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-4">Navigate</h4>
             <div className="space-y-2">
             {["Home", "About", "Contact"].map((link) => {
-  const targetId = link === "Home" ? "hero" : link.toLowerCase();
+  const targetId = link === "Home" ? "Hero" : link;
 
   return (
     <button
