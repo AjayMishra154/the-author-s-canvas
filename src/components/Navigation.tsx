@@ -8,7 +8,7 @@ const navItems = [
   { label: "Books", to: "/work/books" },
   { label: "Films", to: "/work/films" },
   { label: "Festivals", to: "/work/curatorial" },
-  { label: "Podcasts & social", to: "/work/podcasts-social" },
+  { label: "Podcasts & Social", to: "/work/podcasts-social" },
   { label: "Talks & Awards", to: "/work/talks-awards" },
   { label: "Writing & Media", to: "/work/writing-media" },
   { label: "Gallery", to: "/gallery" },

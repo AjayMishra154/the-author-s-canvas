@@ -32,15 +32,23 @@ const FooterSection = () => {
           <div>
             <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-4">Navigate</h4>
             <div className="space-y-2">
-              {["Hero", "About", "Contact"].map((link) => (
-                <button
-                  key={link}
-                  onClick={() => document.querySelector(`#${link.toLowerCase()}`)?.scrollIntoView({ behavior: "smooth" })}
-                  className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {link}
-                </button>
-              ))}
+            {["Home", "About", "Contact"].map((link) => {
+  const targetId = link === "Home" ? "hero" : link.toLowerCase();
+
+  return (
+    <button
+      key={link}
+      onClick={() =>
+        document
+          .querySelector(`#${targetId}`)
+          ?.scrollIntoView({ behavior: "smooth" })
+      }
+      className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+    >
+      {link}
+    </button>
+  );
+})}
               <a
                 href="/work/all"
                 className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
