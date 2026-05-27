@@ -32,23 +32,19 @@ const FooterSection = () => {
           <div>
             <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-4">Navigate</h4>
             <div className="space-y-2">
-            {["Home", "About", "Contact"].map((link) => {
-  const targetId = link === "Home" ? "Hero" : link;
-
-  return (
-    <button
-      key={link}
-      onClick={() =>
-        document
-          .querySelector(`#${targetId}`)
-          ?.scrollIntoView({ behavior: "smooth" })
-      }
-      className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
-    >
-      {link}
-    </button>
-  );
-})}
+              {["Home", "About", "Contact"].map((link) => (
+                <button
+                  key={link}
+                  onClick={() =>
+                    document
+                      .querySelector(`#${link === "Home" ? "hero" : link.toLowerCase()}`)
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link}
+                </button>
+              ))}
               <a
                 href="/work/all"
                 className="block font-body text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -98,12 +94,12 @@ const FooterSection = () => {
             <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-4">Connect</h4>
             <div className="space-y-2">
               {[
-                { label: "YouTube", href: "https://www.youtube.com/@SmallTownsBigStories"},
-                { label: "Twitter/X", href: "https://x.com/carryonpd"},
-                { label: "LinkedIn", href: "https://www.linkedin.com/in/pankaj-dubey-03a9baa/"},
-                { label: "Instagram", href: "https://www.instagram.com/carryonpd/"},
+                { label: "YouTube", href: "https://www.youtube.com/@SmallTownsBigStories" },
+                { label: "Twitter/X", href: "https://x.com/carryonpd" },
+                { label: "LinkedIn", href: "https://www.linkedin.com/in/pankaj-dubey-03a9baa/" },
+                { label: "Instagram", href: "https://www.instagram.com/carryonpd/" },
                 { label: "Facebook", href: "https://www.facebook.com/carryonpd" },
-                { label: "Wikipedia", href: "https://en.wikipedia.org/wiki/Pankaj_Dubey"},
+                { label: "Wikipedia", href: "https://en.wikipedia.org/wiki/Pankaj_Dubey" },
               ].map((platform) => (
                 <a
                   key={platform.label}
@@ -123,8 +119,8 @@ const FooterSection = () => {
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               For press inquiries, speaking engagements, and rights information:
             </p>
-            <a  target="_blank" href={gmailLink} className="font-body text-sm text-primary hover:underline mt-2 inline-block">
-            carryonpd@gmail.com
+            <a target="_blank" href={gmailLink} className="font-body text-sm text-primary hover:underline mt-2 inline-block">
+              carryonpd@gmail.com
             </a>
           </div>
         </motion.div>
